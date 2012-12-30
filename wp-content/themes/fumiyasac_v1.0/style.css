@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+Theme Name: fumiyasac-v1.0
+Theme URI: http://blog.just1factory.com
+Description: fumiyasac create blog template
+Author: Fumiya Sakai (just1factory)
+Author URI: http://blog.just1factory.com
+Template: 
+Version: 1.0
+*/ 
+@import "common/css/yui/reset-min.css";
+@import "common/css/yui/base-min.css";
+@import "common/css/yui/font-min.css";
+@import "common/css/layout.css";
+@import "common/css/detail.css";
+@import "common/css/jscrollpane.css";
+@import "common/css/vtip.css";
