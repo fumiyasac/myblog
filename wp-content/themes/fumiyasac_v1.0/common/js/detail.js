@@ -1,7 +1,7 @@
 /*
     detail.js	
 	
-	Fumiya Sakai(fumiyasac.com)
+	Fumiya Sakai(Just One Factory)
 	
 */
 
