@@ -1,0 +1,87 @@
+<?php
+/*
+Theme Name: fumiyasac-v1.0
+Theme URI: http://blog.just1factory.com
+Description: fumiyasac create blog template
+Author: Fumiya Sakai (just1factory)
+Author URI: http://blog.just1factory.com
+Template: page.php
+Version: 1.0
+*/
+?>
+<?php
+/* いらないCSSを削除 */
+if(has_action('wp_head','_admin_bar_bump_cb')){
+remove_action('wp_head','_admin_bar_bump_cb');
+}
+get_header();
+?>
+
+<!-- breadcramb Start -->
+<aside class="breadcramb">
+<ul>
+<li><a href="./">TOP</a></li>
+<?php if(is_page('about')): ?>
+<li class="last">About：TO CREATE A STIRについて</li>
+<?php elseif(is_page('contact')): ?>
+<li class="last">Contact：お問い合わせ</li>
+<?php endif; ?>
+</ul>
+</aside>
+<!-- breadcramb End -->
+    
+<!-- leftColumn Start -->
+<div id="leftColumn">
+<?php get_sidebar(); ?>
+</div>
+<!-- leftColumn End -->
+
+<!-- rightColumn Start -->
+<div id="rightColumn">
+
+<article class="detailArticle">
+
+<header class="detailTitleArticle">
+<h2>
+<?php if(is_page('about')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_about.gif" height="24" width="740" alt="">
+<?php elseif(is_page('contact')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_contact.gif" height="24" width="740" alt="">
+<?php endif; ?>
+</h2>
+</header>
+
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
+<article class="articleList">
+<header>
+<h3><?php the_title(); ?></h3>
+<p class="date"><time><?php the_date(); ?></time>&nbsp;Author：<?php the_author(); ?></p>
+</header>
+
+<aside class="socialButton">
+<ul>
+<li class="padr10"><a href="http://mixi.jp/share.pl" class="mixi-check-button"　data-key="mixi チェックキー">Check</a>
+<script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script></li>
+<li><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">ツイート</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
+<li><iframe src="http://www.facebook.com/plugins/like.php?locale=ja_JP&amp;href=http%3A%2F%2Fcreo153%2Ecom%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:103px;height:21px;" allowtransparency="true"></iframe></li>
+<li><g:plusone size="medium"></g:plusone></li>
+</ul>
+</aside>
+
+<section>
+<div class="entry">
+<?php the_content(); ?>
+</div>
+</section>
+
+</article>
+</article>
+<?php endwhile; endif; ?>
+    
+</div>
+<!-- rightColumn End -->
+
+</div>
+<!-- mainContainer End -->
+
+<?php get_footer(); ?>

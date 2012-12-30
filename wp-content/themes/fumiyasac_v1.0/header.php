@@ -13,7 +13,14 @@ Version: 1.0
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title><?php bloginfo('name'); ?></title>
+<title>
+<?php bloginfo('name'); ?>
+<?php if(is_page('about')): ?>
+ | About：TO CREATE A STIRについて
+<?php elseif(is_page('contact')): ?>
+ | Contact：お問い合わせ
+<?php endif; ?>
+</title>
 <!-- meta and other definition -->
 <meta name="description" content="<?php bloginfo('description'); ?>">
 <meta name="keywords" content="">
@@ -26,7 +33,7 @@ Version: 1.0
 <![endif]-->
 <!-- CSS definition -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<?php if(is_single()): ?>
+<?php if(is_single() || is_page()): ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/common/css/shadowbox.css">
 <?php endif ?>
 <!-- jQuery definition -->
@@ -43,9 +50,11 @@ Version: 1.0
 <script src="<?php bloginfo('template_url'); ?>/common/js/jquery.autoclear.js"></script>
 <?php if(is_home()): ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/top.js"></script>
-<?php elseif(is_single()): ?>
+<?php elseif(is_single() || is_404() || is_page()): ?>
+<?php if(!is_404()): ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/shadowbox.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/common/js/googleplus1.js"></script>
+<?php endif ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/detail.js"></script>
 <?php else: ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/list.js"></script>
@@ -73,15 +82,15 @@ DD_belatedPNG.fix('#slider .sliderContents .caption,.png');
   
 <!-- header Start -->
 <header id="globalHeader">
-<h1><a href="./">TO CREATE A STIR</a></h1>
+<h1><a href="<?php bloginfo('url'); ?>">TO CREATE A STIR</a></h1>
 <nav>
 <ul>
-<li class="gNav01"><a href="#" class="vtip" title="<strong class='vTitle'>About</strong>：TO CREATE A STIRについて">About</a></li>
-<li class="gNav02"><a href="#" class="vtip" title="<strong class='vTitle'>Report</strong>：勉強会レポートなど">Reports</a></li>
-<li class="gNav03"><a href="#" class="vtip" title="<strong class='vTitle'>Programming</strong>：プログラミングに関する事">Programming</a></li>
-<li class="gNav04"><a href="#" class="vtip" title="<strong class='vTitle'>Design</strong>：デザインに関する事">Design</a></li>
+<li class="gNav01"><a href="/about" class="vtip" title="<strong class='vTitle'>About</strong>：TO CREATE A STIRについて">About</a></li>
+<li class="gNav02"><a href="/archive/category/reports" class="vtip" title="<strong class='vTitle'>Report</strong>：勉強会レポートなど">Reports</a></li>
+<li class="gNav03"><a href="/archive/category/programming" class="vtip" title="<strong class='vTitle'>Programming</strong>：プログラミングに関する事">Programming</a></li>
+<li class="gNav04"><a href="/archive/category/design" class="vtip" title="<strong class='vTitle'>Design</strong>：デザインに関する事">Design</a></li>
 <li class="gNav05"><a href="#" class="vtip" title="<strong class='vTitle'>My Services</strong>：自分で開発したものなど">My Services</a></li>
-<li class="gNav06"><a href="#" class="vtip" title="<strong class='vTitle'>Contact</strong>：お問い合わせ">Contact</a></li>
+<li class="gNav06"><a href="/contact" class="vtip" title="<strong class='vTitle'>Contact</strong>：お問い合わせ">Contact</a></li>
 </ul>
 </nav>
 </header>
