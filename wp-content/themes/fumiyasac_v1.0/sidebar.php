@@ -48,10 +48,6 @@ echo '</a></li>';
 <div class="sideNavContent">
 <ul>
 <?php wp_get_archives('show_post_count=false'); ?>
-<!--<li><a href="#">2011.11</a></li>
-<li><a href="#">2011.10</a></li>
-<li><a href="#">2011.09</a></li>
--->
 </ul>
 </div>
 </aside>
