@@ -47,9 +47,22 @@ function my_archives_link($output) {
     $output = preg_replace('/<\/a>\s*(&nbsp;)\((\d+)\)/',' ($2)</a>',$output);
     return $output;
 }
-add_filter('get_archives_link', 'my_archives_link' );
+add_filter('get_archives_link', 'my_archives_link');
+?>
 
+<?php
+/* コメントのHTMLをカスタマイズする(divの数が合っていないので空のdivを一つ加えてあげる) */
+function mytheme_comment($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
+?>
+<div>
+<div class="commentScntence">
+<p class="commentHeader"><?php comment_author_link(); ?><br><time><?php comment_date(); ?></time></p>
+<?php comment_text(); ?>
+</div>
+<?php } ?>
 
+<?php
 //@todo: 出力したいサイズのバリエーションを増やす
 /*
  * Example:

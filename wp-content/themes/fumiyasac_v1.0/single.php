@@ -138,6 +138,9 @@ get_header();
 </div>
 </aside>
 
+<?php comments_template(); ?>    
+
+<!--
 <aside class="commentDetails">
 <div class="commentToggle">
 <span>皆様から頂いたコメント（10）</span>
@@ -173,7 +176,7 @@ get_header();
 </div>
 </div>
 </aside>
-
+-->
 </article>
 
 </article>
