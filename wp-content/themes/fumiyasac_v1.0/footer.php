@@ -20,18 +20,20 @@ Version: 1.0
 </header>
 <nav class="clearfix">
 <ul class="navBlock1">
-<li><a href="#">TOP</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Reports</a></li>
-<li><a href="#">Programming</a></li>
-<li><a href="#">Design</a></li>
-<li><a href="#">My Services</a></li>
+<li><a href="/">TOP</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/archive/category/reports">Reports</a></li>
+<li><a href="/archive/category/programming">Programming</a></li>
+<li><a href="/archive/category/design">Design</a></li>
+<li><a href="/archive/category/information">Information</a></li>
 </ul>
 <ul class="navBlock2">
-<li><a href="#">Contact</a></li>
-<li><a href="#">Privacy</a></li>
+<li><a href="/archive/category/activities">Activities</a></li>
+<li><a href="#">My Services</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a href="/privacy">Privacy</a></li>
 <li><a href="#">Feed</a></li>
-<li><a href="#">Q&nbsp;&amp;&nbsp;A</a></li>
+<li><a href="/qanda">Q&nbsp;&amp;&nbsp;A</a></li>
 </ul>
 </nav>      
 </section>
