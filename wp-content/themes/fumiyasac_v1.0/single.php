@@ -122,61 +122,8 @@ get_header();
 </div>
 </aside>
 
-<aside class="commentForm">
-<header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_comment_form.gif" height="19" width="700" alt=""></h3>
-</header>
-<div class="commentFormArea">
-<form action="/wp-comments-post.php" method="post" id="commentform">
-<p class="remarkText">メールアドレスは公開されません。&nbsp;<span class="commentRed">*</span>がついている項目は必須になります。</p>
-<p><input type="text" name="author" id="author" class="autoClear" title="お名前を入力してください（必須）" tabindex="1"><label>お名前<span class="commentRed">*</span></label></p>
-<p><input type="text" name="email" id="email" class="autoClear" title="メールアドレスを入力してください（必須）" tabindex="2"><label>E-Mail<span class="commentRed">*</span></label></p>
-<p><input type="text" name="url" id="url" class="autoClear" title="サイトURLを入力してください" tabindex="3"><label>URL</label></p>
-<p><textarea name="comment" id="comment" title="コメントを入力して下さい" class="autoClear" tabindex="4"></textarea></p>
-<input name="submit" type="submit" id="submit" tabindex="5" value="コメントを送信する" />
-</form>
-</div>
-</aside>
-
 <?php comments_template(); ?>    
 
-<!--
-<aside class="commentDetails">
-<div class="commentToggle">
-<span>皆様から頂いたコメント（10）</span>
-</div>
-<div class="commentArea">	
-<div class="commentScntence">
-<p class="commentHeader">Fumiya Sakai<br><time>2011.10.10</time></p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-</div>
-<div class="commentScntence">
-<p class="commentHeader">Fumiya Sakai<br><time>2011.10.10</time></p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-</div>
-<div class="commentScntence">
-<p class="commentHeader">Fumiya Sakai<br><time>2011.10.10</time></p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-</div>
-<div class="commentScntence">
-<p class="commentHeader">Fumiya Sakai<br><time>2011.10.10</time></p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-<p>全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する全てのコメントを表示する。</p>
-</div>
-</div>
-</aside>
--->
 </article>
 
 </article>

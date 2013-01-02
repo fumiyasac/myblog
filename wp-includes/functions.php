@@ -2778,6 +2778,7 @@ if ( 'rtl' == $text_direction ) : ?>
 <body id="error-page">
 <?php endif; ?>
 	<?php echo $message; ?>
+        <p><a href="javascript:history.back();">前のページへ戻る</a></p>
 </body>
 </html>
 <?php

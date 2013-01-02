@@ -54,6 +54,9 @@ Version: 1.0
 <?php if(!is_404()): ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/shadowbox.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/common/js/googleplus1.js"></script>
+<?php if(is_single()): ?>
+<script src="<?php bloginfo('template_url'); ?>/common/js/validator.js"></script>
+<?php endif ?>
 <?php endif ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/detail.js"></script>
 <?php else: ?>

@@ -63,6 +63,15 @@ function mytheme_comment($comment, $args, $depth) {
 <?php } ?>
 
 <?php
+/* コメントの注釈部分を削除する */
+function my_special_comment_after($args){
+    $args['comment_notes_after'] = '';
+    $args['label_submit'] = 'コメントを投稿する';
+    $args['comment_field'] = '<p><textarea id="comment" name="comment" title="コメントを入力して下さい" class="autoClear" aria-required="true"></textarea></p>';
+    return $args;
+}
+add_filter("comment_form_defaults","my_special_comment_after");
+
 //@todo: 出力したいサイズのバリエーションを増やす
 /*
  * Example:

@@ -13,14 +13,19 @@ Version: 1.0
 if(post_password_required()){
     return;
 }
+?>
 
+<?php 
 //コメントフォーム
-
+comment_form();
 ?>
 
 <aside class="commentDetails">
 <div class="commentToggle">
-<span><?php echo '皆様から頂いたコメント（'.get_comments_number().'）'; ?></span>
+<span>
+<?php comments_number('皆様から頂いたコメント（0）', '皆様から頂いたコメント（1）', '皆様から頂いたコメント（%）'); ?>
+<?php /*echo '皆様から頂いたコメント（'.get_comments_number().'）';*/ ?>
+</span>
 </div>
 <div class="commentArea">
 <?php if(have_comments()): ?>
