@@ -13,7 +13,14 @@ $(document).ready(function(){
 	},function(){
 		$(this).animate({backgroundColor:'#ffffff'},200);
 	});
-	
+
+	//RecentEntry Rollover	
+	$('.recentEntry .recentContent ul li a').hover(function(){
+		$(this).animate({backgroundColor:'#f7f7f7'},200);
+	},function(){
+		$(this).animate({backgroundColor:'#ffffff'},200);
+	});
+
 	//submit Rollover	
 	$('#submit').hover(function(){
 		$(this).animate({backgroundColor:'#d1d1d1',color:'#ffffff'},200);

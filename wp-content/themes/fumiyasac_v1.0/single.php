@@ -20,9 +20,19 @@ get_header();
 <!-- breadcramb Start -->
 <aside class="breadcramb">
 <ul>
-<li><a href="#">TOP</a></li>
-<li><a href="#">Programming</a></li>
-<li class="last">タイトルが入ります</li>
+<li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
+<?php if(in_category('information')): ?>
+<li><a href="<?php echo get_category_link('3'); ?>"><?php echo get_catname('3'); ?></a></li>
+<?php elseif(in_category('programming')): ?>
+<li><a href="<?php echo get_category_link('5'); ?>"><?php echo get_catname('5'); ?></a></li>
+<?php elseif(in_category('design')): ?>
+<li><a href="<?php echo get_category_link('6'); ?>"><?php echo get_catname('6'); ?></a></li>
+<?php elseif(in_category('reports')): ?>
+<li><a href="<?php echo get_category_link('4'); ?>"><?php echo get_catname('4'); ?></a></li>
+<?php elseif(in_category('activeties')): ?>
+<li><a href="<?php echo get_category_link('7'); ?>"><?php echo get_catname('7'); ?></a></li>
+<?php endif; ?>
+<li class="last"><?php the_title(); ?></li>
 </ul>
 </aside>
 <!-- breadcramb End -->
@@ -37,16 +47,30 @@ get_header();
 <div id="rightColumn">
 
 <article class="detailArticle">
-
+    
 <header class="detailTitleArticle">
-<h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_programming.gif" height="24" width="740" alt=""></h2>
+<h2>
+<?php if(in_category('information')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_information.gif" height="24" width="740" alt="">
+<?php elseif(in_category('programming')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_programming.gif" height="24" width="740" alt="">
+<?php elseif(in_category('design')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_design.gif" height="24" width="740" alt="">
+<?php elseif(in_category('reports')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_reports.gif" height="24" width="740" alt="">
+<?php elseif(in_category('activeties')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_activeties.gif" height="24" width="740" alt="">    
+<?php endif; ?>
+</h2>
 </header>
 
+<?php if(have_posts()):while(have_posts()):the_post(); ?>
 <article class="articleList">
 <header>
-<h3>タイトルが入ります</h3>
-<p class="date"><time>2011.11.07</time>&nbsp;Author：Fumiya Sakai</p>
+<h3><?php the_title(); ?></h3>
+<p class="date"><time><?php the_time('Y.n.j'); ?></time>&nbsp;Author：<?php the_author(); ?></p>
 </header>
+<?php endwhile;endif; ?>
 
 <aside class="socialButton">
 <ul>
@@ -97,13 +121,30 @@ get_header();
 
 <aside class="categoryInfo">
 <div class="categoryInfoBox">
+<?php if(in_category('information')): ?>
+<p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_information.gif" height="15" width="69" alt=""></p>
+<?php elseif(in_category('programming')): ?>
 <p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_programming.gif" height="15" width="70" alt=""></p>
+<?php elseif(in_category('design')): ?>
+<p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_design.gif" height="15" width="40" alt=""></p>
+<?php elseif(in_category('reports')): ?>
+<p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_reports.gif" height="15" width="41" alt=""></p>
+<?php elseif(in_category('activeties')): ?>
+<p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt=""></p>
+<?php endif; ?>
 <div>
 <ul>
 <li><a href="#">PHP</a></li>
 <li><a href="#">CakePHP</a></li>
 </ul>
 </div>
+</div>
+</aside>
+
+<aside class="linkButtons">
+<div>
+<p class="prevBtn"><?php previous_posts_link('&lt;&lt;&nbsp;Previous Entry'); ?></p>
+<p class="nextBtn"><?php next_posts_link('Next Entry&nbsp;&gt;&gt;'); ?></p>
 </div>
 </aside>
 
@@ -118,6 +159,21 @@ get_header();
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
+</ul>
+</div>
+</aside>
+
+<aside class="recentEntry">
+<header>
+<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_recent_entries.gif" height="19" width="700" alt=""></h3>
+</header>
+<div class="recentContent">
+<ul>
+<li><a href="#">最新のエントリーが入ります</a></li>
+<li><a href="#">最新のエントリーが入ります</a></li>
+<li><a href="#">最新のエントリーが入ります</a></li>
+<li><a href="#">最新のエントリーが入ります</a></li>
+<li><a href="#">最新のエントリーが入ります</a></li>
 </ul>
 </div>
 </aside>

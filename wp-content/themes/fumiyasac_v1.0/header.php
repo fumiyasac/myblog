@@ -14,12 +14,7 @@ Version: 1.0
 <head>
 <meta charset="UTF-8">
 <title>
-<?php bloginfo('name'); ?>
-<?php if(is_page('about')): ?>
- | About：TO CREATE A STIRについて
-<?php elseif(is_page('contact')): ?>
- | Contact：お問い合わせ
-<?php endif; ?>
+<?php wp_title( '|', true, 'right' ); bloginfo('name'); ?>
 </title>
 <!-- meta and other definition -->
 <meta name="description" content="<?php bloginfo('description'); ?>">
@@ -85,7 +80,7 @@ DD_belatedPNG.fix('#slider .sliderContents .caption,.png');
   
 <!-- header Start -->
 <header id="globalHeader">
-<h1><a href="<?php bloginfo('url'); ?>">TO CREATE A STIR</a></h1>
+    <h1><a href="<?php echo home_url('/'); ?>">TO CREATE A STIR</a></h1>
 <nav>
 <ul>
 <li class="gNav01"><a href="/about" class="vtip" title="<strong class='vTitle'>About</strong>：TO CREATE A STIRについて">About</a></li>

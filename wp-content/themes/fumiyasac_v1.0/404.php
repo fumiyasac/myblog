@@ -20,8 +20,8 @@ get_header();
 <!-- breadcramb Start -->
 <aside class="breadcramb">
 <ul>
-<li><a href="./">TOP</a></li>
-<li class="last">404：ページが見つかりません</li>
+<li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
+<li class="last">ページが見つかりませんでした</li>
 </ul>
 </aside>
 <!-- breadcramb End -->
@@ -43,7 +43,7 @@ get_header();
 
 <article class="articleList">
 <header>
-<h3>お探しのページが見つかりませんでした</h3>
+<h3>お探しのページは見つかりませんでした</h3>
 </header>
 
 <section>

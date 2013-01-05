@@ -489,8 +489,41 @@ line-height:1.7;
 list-style-type:disc;
 }
 
-/* Blog Modules(1.SocialMedia) */
+/* Blog Modules(1.Link Button) */
+.linkButtons{
+margin:0 20px;
+width:700px;
+height:auto;
+background:#ffffff;
+margin-bottom:50px;
+}
 
+.linkButtons div{
+width:700px;
+height: 20px;
+position: relative;
+}
+
+.linkButtons div p a{
+color:#878787;
+text-decoration:none;
+}
+
+.linkButtons div p a:hover{
+text-decoration:underline;
+}
+
+.linkButtons div p.prevBtn{
+position: absolute;
+left:0px;
+top:0px;
+}
+
+.linkButtons div p.nextBtn{
+position: absolute;
+right:0px;
+top:0px;
+}
 
 /* Blog Modules(2.Category) */
 .categoryInfo{
@@ -578,7 +611,50 @@ font-size: 85%;
 zoom:1; /* IE6,7 */
 }
 
-/* Blog Modules(4.Comment) */
+/* Blog Modules(4.Recent Entry) */
+.recentEntry{
+margin:0 20px;
+width:700px;
+height:auto;
+background:#ffffff;
+margin-bottom:50px;
+}
+
+.recentEntry header{
+margin:0;
+}
+
+.recentEntry header h3{
+width:700px;
+height:19px;
+}
+
+.recentEntry .recentContent{
+}
+
+.recentEntry .recentContent ul{
+}
+
+.recentEntry .recentContent ul li{
+list-style-type: none;
+color:#333333;
+border-bottom: 1px dotted #dddddd;
+background:#f7f7f7;
+width: 700px;
+}
+
+.recentEntry .recentContent ul li a{
+display: block;
+background:#ffffff url(../images/common/icon_bg_comment.gif) left center no-repeat;
+padding: 6px 0 6px 12px;
+text-decoration: none;
+color:#333333;
+font-size: 85%;
+zoom:1; /* IE6,7 */
+}
+
+
+/* Blog Modules(5.Comment) */
 .commentRed{
 color:#FF0000;
 }
@@ -678,7 +754,7 @@ font-weight:bold;
 font-size:93%;
 }
 
-/* Blog Modules(5.CommentList) */
+/* Blog Modules(6.CommentList) */
 .commentDetails{
 margin:0 20px;
 width:700px;
