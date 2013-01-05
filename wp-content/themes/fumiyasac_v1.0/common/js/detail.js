@@ -6,7 +6,10 @@
 */
 
 $(document).ready(function(){
-	
+    
+	//Rollover Action(detail image).
+	$('.entry p a img').opOver(1.0,0.3,400,400);
+
 	//RelatedEntry Rollover	
 	$('.relatedEntry .relatedContent ul li a').hover(function(){
 		$(this).animate({backgroundColor:'#f7f7f7'},200);
