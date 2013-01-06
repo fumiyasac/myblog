@@ -20,11 +20,11 @@ get_header();
 <!-- breadcramb Start -->
 <aside class="breadcramb">
 <ul>
-<li><a href="./">TOP</a></li>
+<li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
 <?php if(is_page('about')): ?>
-<li class="last">About：TO CREATE A STIRについて</li>
+<li class="last">About</li>
 <?php elseif(is_page('contact')): ?>
-<li class="last">Contact：お問い合わせ</li>
+<li class="last">Contact</li>
 <?php endif; ?>
 </ul>
 </aside>

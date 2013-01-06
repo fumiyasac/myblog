@@ -65,21 +65,39 @@ get_header();
 <h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_latest.gif" height="24" width="740" alt=""></h2>
 </header>
 
+<?php query_posts('showposts=5'); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article class="articleList">
 <header>
-<h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-<p class="date"><time>2011.11.07</time>&nbsp;Author：Fumiya Sakai</p>
+<h3><?php the_title(); ?></h3>
+<p class="date"><time><?php the_time('Y.n.j'); ?></time>&nbsp;Author：<?php the_author(); ?></p>
 </header>
 <section>
 <div class="entries">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample1.jpg" height="200" width="300" alt="" class="image padr20">
-<p class="category"><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_programming.gif" height="15" width="70" alt=""></p>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります...</p>
-<p class="readMore"><a href="#">Read More</a></p>
+<?php if(has_post_thumbnail($post->ID)): ?>
+<?php echo get_the_post_thumbnail($post->ID); ?>
+<?php else: ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/sample/post_no_thumbnail.jpg" height="200" width="300" alt="" class="image padr20">
+<?php endif; ?>
+<p class="category">
+<?php if(in_category('information')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_information.gif" height="15" width="69" alt="">
+<?php elseif(in_category('programming')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_programming.gif" height="15" width="70" alt="">
+<?php elseif(in_category('design')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_design.gif" height="15" width="40" alt="">
+<?php elseif(in_category('reports')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_reports.gif" height="15" width="41" alt="">
+<?php elseif(in_category('activeties')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt="">
+<?php endif; ?>    
+</p>
+<?php the_content('',false,''); ?>
+<p class="readMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
 </div>
 </section>
 </article>
-
+<!--
 <article class="articleList">
 <header>
 <h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
@@ -94,6 +112,9 @@ get_header();
 </div>
 </section>
 </article>
+-->
+<?php endwhile; endif; ?>
+<?php wp_reset_query(); ?>
 
 </article>
 

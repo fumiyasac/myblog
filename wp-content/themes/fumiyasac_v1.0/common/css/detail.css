@@ -489,6 +489,56 @@ line-height:1.7;
 list-style-type:disc;
 }
 
+/* table code */
+.entry table{
+margin-bottom:1em;
+}
+
+.entry th{
+text-align: left;
+border: solid 1px #d1d1d1;
+background:#f7f7f7;
+color: #00486a;
+}
+
+.entry td{
+border: solid 1px #d1d1d1;
+}
+
+/* write code */
+.entry .codeArea{
+background:#f7f7f7;
+border:dotted 1px #d1d1d1;
+margin-bottom:1em;
+}
+
+/* write code ex1 */
+.entry .codeArea pre{
+padding:4px 8px;
+color: #333333;
+line-height: 1.7;
+margin-bottom: 0em;
+}
+
+.entry .codeArea pre code{
+}
+
+/* write code ex2 */
+.entry .codeArea ol.codeView{
+font:100% monospace;
+margin-bottom: 0em;
+padding: 4px 30px;
+}
+
+.entry .codeArea ol.codeView li{
+line-height: 1.7;
+color: #00486a;
+}
+
+.entry .codeArea ol.codeView li code{
+color: #333333;
+}
+
 /* Blog Modules(1.Link Button) */
 .linkButtons{
 margin:0 20px;
@@ -502,6 +552,10 @@ margin-bottom:50px;
 width:700px;
 height: 20px;
 position: relative;
+}
+
+.linkButtons div p{
+font-size: 93%;
 }
 
 .linkButtons div p a{

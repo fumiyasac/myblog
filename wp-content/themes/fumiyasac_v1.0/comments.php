@@ -24,7 +24,6 @@ comment_form();
 <div class="commentToggle">
 <span>
 <?php comments_number('皆様から頂いたコメント（0）', '皆様から頂いたコメント（1）', '皆様から頂いたコメント（%）'); ?>
-<?php /*echo '皆様から頂いたコメント（'.get_comments_number().'）';*/ ?>
 </span>
 </div>
 <div class="commentArea">

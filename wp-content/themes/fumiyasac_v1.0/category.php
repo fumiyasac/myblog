@@ -5,7 +5,7 @@ Theme URI: http://blog.just1factory.com
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
 Author URI: http://blog.just1factory.com
-Template: archive.php
+Template: category.php
 Version: 1.0
 */ 
 ?>
@@ -17,12 +17,22 @@ remove_action('wp_head','_admin_bar_bump_cb');
 get_header();
 ?>
 
-<!-- **archive template** -->
+<!-- **category template** -->
 <!-- breadcramb Start -->
 <aside class="breadcramb">
 <ul>
 <li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-<li class="last">Back Number：<?php the_time('Y年n月'); ?></li>
+<?php if(in_category('information')): ?>
+<li class="last"><?php echo get_catname('3'); ?></li>
+<?php elseif(in_category('programming')): ?>
+<li class="last"><?php echo get_catname('5'); ?></li>
+<?php elseif(in_category('design')): ?>
+<li class="last"><?php echo get_catname('6'); ?></li>
+<?php elseif(in_category('reports')): ?>
+<li class="last"><?php echo get_catname('4'); ?></li>
+<?php elseif(in_category('activeties')): ?>
+<li class="last"><?php echo get_catname('7'); ?></li>
+<?php endif; ?>
 </ul>
 </aside>
 <!-- breadcramb End -->
@@ -40,7 +50,17 @@ get_header();
 
 <header class="listTitleArticle">
 <h2>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_monthly.gif" height="24" width="740" alt="">
+<?php if(in_category('information')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_information.gif" height="24" width="740" alt="">
+<?php elseif(in_category('programming')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_programming.gif" height="24" width="740" alt="">
+<?php elseif(in_category('design')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_design.gif" height="24" width="740" alt="">
+<?php elseif(in_category('reports')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_reports.gif" height="24" width="740" alt="">
+<?php elseif(in_category('activeties')): ?>
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_activeties.gif" height="24" width="740" alt="">    
+<?php endif; ?>
 </h2>
 </header>
 

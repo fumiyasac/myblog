@@ -84,9 +84,9 @@ DD_belatedPNG.fix('#slider .sliderContents .caption,.png');
 <nav>
 <ul>
 <li class="gNav01"><a href="/about" class="vtip" title="<strong class='vTitle'>About</strong>：TO CREATE A STIRについて">About</a></li>
-<li class="gNav02"><a href="/archive/category/reports" class="vtip" title="<strong class='vTitle'>Report</strong>：勉強会レポートなど">Reports</a></li>
-<li class="gNav03"><a href="/archive/category/programming" class="vtip" title="<strong class='vTitle'>Programming</strong>：プログラミングに関する事">Programming</a></li>
-<li class="gNav04"><a href="/archive/category/design" class="vtip" title="<strong class='vTitle'>Design</strong>：デザインに関する事">Design</a></li>
+<li class="gNav02"><a href="/archives/category/reports" class="vtip" title="<strong class='vTitle'>Report</strong>：勉強会レポートなど">Reports</a></li>
+<li class="gNav03"><a href="/archives/category/programming" class="vtip" title="<strong class='vTitle'>Programming</strong>：プログラミングに関する事">Programming</a></li>
+<li class="gNav04"><a href="/archives/category/design" class="vtip" title="<strong class='vTitle'>Design</strong>：デザインに関する事">Design</a></li>
 <li class="gNav05"><a href="#" class="vtip" title="<strong class='vTitle'>My Services</strong>：自分で開発したものなど">My Services</a></li>
 <li class="gNav06"><a href="/contact" class="vtip" title="<strong class='vTitle'>Contact</strong>：お問い合わせ">Contact</a></li>
 </ul>

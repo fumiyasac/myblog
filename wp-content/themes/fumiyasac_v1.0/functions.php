@@ -79,4 +79,12 @@ add_filter("comment_form_defaults","my_special_comment_after");
  * add_image_size( 'mini', 45, 45, true );
  * 
  */
+add_image_size( 'blog_article', 700, 464, true );
+
+//ビジュアルリッチエディターにボタンを追加
+function ilc_mce_buttons($buttons){
+    array_push($buttons, "backcolor", "copy", "cut", "paste", "fontsizeselect", "cleanup");
+    return $buttons;
+}
+add_filter("mce_buttons", "ilc_mce_buttons");
 ?>

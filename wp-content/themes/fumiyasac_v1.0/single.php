@@ -84,38 +84,9 @@ get_header();
 
 <section>
 <div class="entry">
-
-<!--fundamental set//-->
-<p><a rel="shadowbox" href="<?php bloginfo('template_url'); ?>/upload/sample_large2.jpg" title="sample"><img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_detail_sample.jpg" height="464" width="700" title="" class="image"></a></p>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-
-<!--header set//-->
-<h4>強調タグとリンクタグ、改行タグの行間</h4>
-<p><strong>ここだけ強調タグが入ります。</strong><br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-<p><a href="#">リンクが入ります。</a></p>
-
-<!--blockquote set//-->
-<h4>引用・転載部分の行間</h4>
-<blockquote>
-<p>引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載引用・転載</p>
-</blockquote>
-
-<!--list & table set//-->
-<h4>リストタグの行間</h4>
-<ul>
-<li>リスト1</li>
-<li>リスト2</li>
-<li>リスト3</li>
-</ul>
-
-<ol>
-<li>リスト1</li>
-<li>リスト2</li>
-<li>リスト3</li>
-</ol>
-
+<?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php the_content(); ?>    
+<?php endwhile;endif; ?>
 </div>
 </section>
 
@@ -133,18 +104,15 @@ get_header();
 <p><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt=""></p>
 <?php endif; ?>
 <div>
-<ul>
-<li><a href="#">PHP</a></li>
-<li><a href="#">CakePHP</a></li>
-</ul>
+<?php the_tags('<ul><li>','</li><li>','</li></ul>');?>
 </div>
 </div>
 </aside>
 
 <aside class="linkButtons">
 <div>
-<p class="prevBtn"><?php previous_posts_link('&lt;&lt;&nbsp;Previous Entry'); ?></p>
-<p class="nextBtn"><?php next_posts_link('Next Entry&nbsp;&gt;&gt;'); ?></p>
+<p class="prevBtn"><?php previous_post_link('%link','&laquo; Previous Entry'); ?></p>
+<p class="nextBtn"><?php next_post_link('%link','Next Entry &raquo;') ?></p>
 </div>
 </aside>
 
@@ -169,11 +137,11 @@ get_header();
 </header>
 <div class="recentContent">
 <ul>
-<li><a href="#">最新のエントリーが入ります</a></li>
-<li><a href="#">最新のエントリーが入ります</a></li>
-<li><a href="#">最新のエントリーが入ります</a></li>
-<li><a href="#">最新のエントリーが入ります</a></li>
-<li><a href="#">最新のエントリーが入ります</a></li>
+<?php query_posts('showposts=5'); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endwhile; endif; ?>
+<?php wp_reset_query(); ?>
 </ul>
 </div>
 </aside>
