@@ -7,11 +7,10 @@
 $(function(){
   
     var selector = "a[href=\"#pageTop\"]";
-    var durationParam = 600;
-    var easingParam = "easeInOutExpo";    
-    var $pageTopLink = $(selector);
+    var duration = 400;
+    var easing = "easeInOutExpo";
     
-    $pageTopLink.bind("click", onClick);
+    $(selector).bind("click", onClick);
     
     function onClick(e) {
       e.preventDefault();
@@ -19,8 +18,8 @@ $(function(){
       $("html, body").animate({
         scrollTop: 0
       }, {
-        duration: durationParam,
-        easing: easingParam
+        duration: duration,
+        easing: easing
       });
     }
   

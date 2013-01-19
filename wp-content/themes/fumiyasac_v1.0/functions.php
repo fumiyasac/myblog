@@ -79,7 +79,7 @@ add_filter("comment_form_defaults","my_special_comment_after");
  * add_image_size( 'mini', 45, 45, true );
  * 
  */
-add_image_size( 'blog_article', 700, 464, true );
+add_image_size('blog_article', 700, 464, true);
 
 //ビジュアルリッチエディターにボタンを追加
 function ilc_mce_buttons($buttons){
@@ -87,4 +87,83 @@ function ilc_mce_buttons($buttons){
     return $buttons;
 }
 add_filter("mce_buttons", "ilc_mce_buttons");
+
+//カスタム投稿タイプを作成（services）
+//開発サービス投稿タイプ
+function services_custom_post_type(){    $labels = array(
+        'name' => _x('開発サービス事例', 'post type general name'),
+        'singular_name' => _x('開発サービス事例', 'post type singular name'),
+        'add_new' => _x('開発サービス事例を追加', 'jobinfo'),
+        'add_new_item' => __('新しい開発サービス事例を追加'),
+        'edit_item' => __('開発サービス事例を編集'),
+        'new_item' => __('新しい開発サービス事例'),
+        'view_item' => __('開発サービス事例を編集'),
+        'search_items' => __('開発サービス事例を探す'),
+        'not_found' => __('開発サービス事例はありません'),
+        'not_found_in_trash' => __('ゴミ箱に開発サービス事例はありません'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+/*        'rewrite' => true, */
+        'rewrite' => array('slug' => 'services'),
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'supports' => array('title','editor','author','excerpt','comments','custom-fields','thumbnail'),
+        'taxonomies' => array('services_category','services_tag')
+    );
+    register_post_type('services',$args);
+
+    //カスタムタクソノミーを作成
+    //カテゴリータイプ
+    $args = array(
+        'label' => '開発サービス事例カテゴリー',
+        'public' => true,
+        'show_ui' => true,
+        'hierarchical' => true
+    );
+    register_taxonomy('services_category','services',$args);
+   
+    //タグタイプ
+    $args = array(
+        'label' => '開発サービス事例タグ',
+        'public' => true,
+        'show_ui' => true,
+        'hierarchical' => false
+    );
+    register_taxonomy('services_tag','services',$args);
+}
+add_action('init', 'services_custom_post_type');
+
+//カスタム投稿タイプのスラッグをページIDにするためのリライト設定
+function myposttype_rewrite() {
+    global $wp_rewrite;
+    $queryarg = 'post_type=services&p=';
+    $wp_rewrite->add_rewrite_tag('%services_id%', '([^/]+)',$queryarg);
+    $wp_rewrite->add_permastruct('services', '/services/%services_id%', false);
+}
+add_action('init', 'myposttype_rewrite');
+
+function myposttype_permalink($post_link, $id = 0, $leavename) {
+    global $wp_rewrite;
+    $post = &get_post($id);
+    if ( is_wp_error( $post ) )
+        return $post;
+    $newlink = $wp_rewrite->get_extra_permastruct($post->post_type);
+    $newlink = str_replace('%'.$post->post_type.'_id%', $post->ID, $newlink);
+    $newlink = home_url(user_trailingslashit($newlink));
+    return $newlink;
+}
+add_filter('post_type_link', 'myposttype_permalink', 1, 3);
+
+//wordpressのバージョンアップ通知を消去する
+add_filter( 'pre_site_transient_update_core', '__return_zero' );
+remove_action( 'wp_version_check', 'wp_version_check' );
+remove_action( 'admin_init', '_maybe_update_core' );
 ?>

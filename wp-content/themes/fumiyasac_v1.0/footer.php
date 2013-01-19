@@ -22,14 +22,14 @@ Version: 1.0
 <ul class="navBlock1">
 <li><a href="/">TOP</a></li>
 <li><a href="/about">About</a></li>
-<li><a href="/archives/category/reports">Reports</a></li>
-<li><a href="/archives/category/programming">Programming</a></li>
-<li><a href="/archives/category/design">Design</a></li>
-<li><a href="/archives/category/information">Information</a></li>
+<li><a href="/reports">Reports</a></li>
+<li><a href="/programming">Programming</a></li>
+<li><a href="/design">Design</a></li>
+<li><a href="/information">Information</a></li>
 </ul>
 <ul class="navBlock2">
-<li><a href="/archives/category/activities">Activities</a></li>
-<li><a href="#">My Services</a></li>
+<li><a href="/activities">Activities</a></li>
+<li><a href="/services">My Services</a></li>
 <li><a href="/contact">Contact</a></li>
 <li><a href="/privacy">Privacy</a></li>
 <li><a href="#">Feed</a></li>

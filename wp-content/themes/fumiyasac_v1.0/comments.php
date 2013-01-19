@@ -21,6 +21,7 @@ comment_form();
 ?>
 
 <aside class="commentDetails">
+<?php if(get_post_type() === 'post'): ?>
 <div class="commentToggle">
 <span>
 <?php comments_number('皆様から頂いたコメント（0）', '皆様から頂いたコメント（1）', '皆様から頂いたコメント（%）'); ?>
@@ -38,4 +39,9 @@ wp_list_comments($args);
 ?>
 <?php endif; ?>
 </div>
+<?php else: ?>
+<div class="commentServicesMessage">
+<p>サービスに関するコメント及びご意見・ご要望は非公開となっております。</p>
+</div>
+<?php endif; ?>
 </aside>

@@ -9,6 +9,7 @@
 	01: index
 	02: list
 	03: detail
+        04: services
 
 */
 
@@ -619,6 +620,14 @@ margin:0 3px;
 padding-top:1px;
 }
 
+.categoryInfo .categoryInfoBox div ul.services_tag li{
+color:#878787;
+font-weight:bold;
+text-decoration:none;
+margin:0 3px;
+padding-top:1px;
+}
+
 .categoryInfo .categoryInfoBox div ul li a:hover{
 text-decoration:underline;
 }
@@ -816,6 +825,10 @@ height:auto;
 background:#ffffff;
 }
 
+.commentDetails .commentServicesMessage p{
+font-size:93%;
+}
+
 .commentDetails .commentToggle{
 width:700px;
 height:auto;
@@ -859,4 +872,122 @@ font-weight:bold;
 font-size:85%;
 margin-top:3px;
 margin-bottom:6px;
+}
+
+/* ============================================================
+04: services
+============================================================ */
+/* Blog Modules(7.Service Info) */
+.serviceInfoList{
+margin:0 20px;
+width:700px;
+height:auto;
+background:#ffffff;
+margin-bottom:50px;
+}
+
+.serviceInfoList header{
+margin:0;
+}
+
+.serviceInfoList header h3{
+width:700px;
+height:19px;
+}
+
+.serviceInfoList .serviceContentList{
+}
+
+.serviceInfoList .serviceContentList ul{
+}
+
+.serviceInfoList .serviceContentList ul li{
+list-style-type: none;
+color:#333333;
+border-bottom: 1px dotted #dddddd;
+background:#f7f7f7;
+width: 700px;
+}
+
+.serviceInfoList .serviceContentList ul li a{
+display: block;
+background:#ffffff url(../images/common/icon_bg_comment.gif) left center no-repeat;
+padding: 6px 0 6px 12px;
+text-decoration: none;
+color:#333333;
+font-size: 85%;
+zoom:1; /* IE6,7 */
+}
+
+/* Blog Modules(8.Maintenance Info) */
+.serviceInfoList{
+margin:0 20px;
+width:700px;
+height:auto;
+background:#ffffff;
+margin-bottom:50px;
+}
+
+.serviceInfoList header{
+margin:0;
+}
+
+.serviceInfoList header h3{
+width:700px;
+height:19px;
+}
+
+.serviceInfoList .serviceContentList{
+}
+
+.serviceInfoList .serviceContentList ul{
+}
+
+.serviceInfoList .serviceContentList ul li{
+list-style-type: none;
+color:#333333;
+border-bottom: 1px dotted #dddddd;
+background:#f7f7f7;
+width: 700px;
+}
+
+.serviceInfoList .serviceContentList ul li a{
+display: block;
+background:#ffffff url(../images/common/icon_bg_comment.gif) left center no-repeat;
+padding: 6px 0 6px 12px;
+text-decoration: none;
+color:#333333;
+font-size: 85%;
+zoom:1; /* IE6,7 */
+}
+
+.serviceInfoList .serviceContentList p{
+padding-top: 15px;
+font-size:93%;
+}
+
+/* Blog Modules(7.Service Info) */
+.serviceMaintenance{
+margin:0 20px;
+width:700px;
+height:auto;
+background:#ffffff;
+margin-bottom:50px;
+}
+
+.serviceMaintenance header{
+margin:0;
+}
+
+.serviceMaintenance header h3{
+width:700px;
+height:19px;
+}
+
+.serviceMaintenance .serviceMaintenanceInfo{
+}
+
+.serviceMaintenance .serviceMaintenanceInfo p{
+padding-top: 15px;
+font-size:93%;
 }
