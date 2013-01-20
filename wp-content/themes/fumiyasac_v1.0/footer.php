@@ -30,10 +30,9 @@ Version: 1.0
 <ul class="navBlock2">
 <li><a href="/activities">Activities</a></li>
 <li><a href="/services">My Services</a></li>
+<li><a href="/advertisement">Advertisement</a></li>
 <li><a href="/contact">Contact</a></li>
-<li><a href="/privacy">Privacy</a></li>
 <li><a href="#">Feed</a></li>
-<li><a href="/qanda">Q&nbsp;&amp;&nbsp;A</a></li>
 </ul>
 </nav>      
 </section>
