@@ -145,7 +145,7 @@ if($tagsList = get_the_terms($post->ID,'services_tag')){
 </header>
 <div class="serviceContentList">
 <?php
-//サービスの更新情報（JSON形式）を読み込んでリスト表示をする
+//@todo:サービスの更新情報（JSON形式）を読み込んでリスト表示をする
 $infoJson = file_get_contents(get_post_meta($post->ID,'更新情報JSONデータURL',true),true);
 if($infoJson != false){
     $serviceNewInfoList = json_decode($infoJson, true);
