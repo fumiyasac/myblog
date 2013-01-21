@@ -877,6 +877,43 @@ margin-bottom:6px;
 /* ============================================================
 04: services
 ============================================================ */
+/* serviceList */
+.services{
+margin: 0 20px;
+width: 700px;
+height:auto;
+overflow:hidden;
+}
+
+.services .image{
+vertical-align:bottom;
+float:left;
+}
+
+.services p{
+line-height:1.7;
+}
+
+.services p.category{
+/margin-bottom:6px;
+}
+
+.services p.readMore{
+text-align: right;
+}
+
+.services p.readMore a{
+color: #333333;
+text-decoration: none;
+background:url(../images/common/icon_bg_comment.gif) left center no-repeat;
+padding-left: 12px;
+}
+
+.services p.readMore a:hover{
+color: #333333;
+text-decoration: underline;
+}
+
 /* Blog Modules(7.Service Info) */
 .serviceInfoList{
 margin:0 20px;

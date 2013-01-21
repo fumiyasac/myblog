@@ -65,7 +65,11 @@ get_header();
 <section>
 <div class="entry">
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php if(has_post_thumbnail($post->ID)): ?>
+<p><?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?></p>
+<?php else: ?>
 <p><img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" alt=""></p>
+<?php endif; ?>
 <h4>サービス概要</h4>
 <?php the_excerpt(); ?>
 <h4>サービス説明</h4>
@@ -86,7 +90,7 @@ get_header();
 </tr>
 <tr>
 <th>サービスURL</th>
-<td><?php echo get_post_meta($post->ID,'サービスURL',true); ?></td>
+<td><a href="<?php echo get_post_meta($post->ID,'サービスURL',true); ?>" target="_blank"><?php echo get_post_meta($post->ID,'サービスURL',true); ?></a></td>
 </tr>
 </table>
 <p>このブログではサービスに関するお問い合わせ／ご意見・感想等を受け付けております。

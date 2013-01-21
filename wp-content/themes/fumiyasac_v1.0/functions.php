@@ -80,6 +80,7 @@ add_filter("comment_form_defaults","my_special_comment_after");
  * 
  */
 add_image_size('blog_article', 700, 464, true);
+add_image_size('service_article', 700, 350, true);
 
 //ビジュアルリッチエディターにボタンを追加
 function ilc_mce_buttons($buttons){

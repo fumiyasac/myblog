@@ -51,11 +51,11 @@ get_header();
 <p class="date"><time><?php the_time('Y.n.j'); ?></time>&nbsp;Author：<?php the_author(); ?></p>
 </header>
 <section>
-<div class="entries">
+<div class="services">
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID); ?>
+<?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?>
 <?php else: ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/post_no_thumbnail.jpg" height="200" width="300" alt="" class="image padr20">
+<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" alt="">
 <?php endif; ?>
 <p class="category">
 <?php if(in_category('information')): ?>
@@ -70,8 +70,8 @@ get_header();
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt="">
 <?php endif; ?>
 </p>
-<?php the_content('',false,''); ?>
-<p class="readMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
+<p><?php echo get_post_meta($post->ID,'開発サービスのキャッチコピー',true); ?></p>
+<p class="readMore"><a href="<?php the_permalink(); ?>">Show Details</a></p>
 </div>
 </section>
 </article>

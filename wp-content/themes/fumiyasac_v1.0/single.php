@@ -85,6 +85,7 @@ get_header();
 <section>
 <div class="entry">
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php /* which is better? exec get_the_post_thumbnail() or edit form blog ? */ ?>
 <?php the_content(); ?>    
 <?php endwhile;endif; ?>
 </div>
