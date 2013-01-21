@@ -32,7 +32,7 @@ Version: 1.0
 <li><a href="/services">My Services</a></li>
 <li><a href="/advertisement">Advertisement</a></li>
 <li><a href="/contact">Contact</a></li>
-<li><a href="#">Feed</a></li>
+<li><a href="/feed">Feed</a></li>
 </ul>
 </nav>      
 </section>

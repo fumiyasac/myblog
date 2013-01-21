@@ -1,10 +1,10 @@
 <?php
+ob_end_clean();
 /**
  * RSS2 Feed Template for displaying RSS2 Posts feed.
  *
  * @package WordPress
  */
-
 header('Content-Type: ' . feed_content_type('rss-http') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
 
