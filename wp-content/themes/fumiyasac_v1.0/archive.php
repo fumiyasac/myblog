@@ -17,7 +17,6 @@ remove_action('wp_head','_admin_bar_bump_cb');
 get_header();
 ?>
 
-<!-- **archive template** -->
 <!-- breadcramb Start -->
 <aside class="breadcramb">
 <ul>

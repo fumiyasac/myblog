@@ -5,7 +5,7 @@ Theme URI: http://blog.just1factory.com
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
 Author URI: http://blog.just1factory.com
-Template: archive-services.php
+Template: tag.php
 Version: 1.0
 */ 
 ?>
@@ -21,7 +21,7 @@ get_header();
 <aside class="breadcramb">
 <ul>
 <li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-<li class="last">Services</li>
+<li class="last">Search：該当タグでの検索結果</li>
 </ul>
 </aside>
 <!-- breadcramb End -->
@@ -39,10 +39,24 @@ get_header();
 
 <header class="listTitleArticle">
 <h2>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_myservices.gif" height="24" width="740" alt="">
+<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_search.gif" height="24" width="740" alt="">
 </h2>
 </header>
 
+<aside class="countSearch">   
+<p>
+<?php
+$post_tags = get_the_tags();
+foreach($post_tags as $post_tag){
+    if($post_tag->name === single_tag_title('', false)){
+        $count = $post_tag->count;
+    }
+}
+echo '<strong>'.single_tag_title('', false).'</strong> で検索した結果：<strong>'.$count.' 件</strong>';
+?>
+</p>
+</aside>
+    
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 <article class="articleList">
 <header>
@@ -50,11 +64,14 @@ get_header();
 <p class="date"><time><?php the_time('Y.n.j'); ?></time>&nbsp;Author：<?php the_author(); ?></p>
 </header>
 <section>
-<div class="services">
+<div class="entries">
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?>
+<?php
+$attr = array('class' => 'image padr20');
+echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr); 
+?>
 <?php else: ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" alt="">
+<img src="<?php bloginfo('template_url'); ?>/common/images/sample/post_no_thumbnail.jpg" height="200" width="300" alt="" class="image padr20">
 <?php endif; ?>
 <p class="category">
 <?php if(in_category('information')): ?>
@@ -69,13 +86,26 @@ get_header();
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt="">
 <?php endif; ?>
 </p>
-<p><?php echo get_post_meta($post->ID,'開発サービスのキャッチコピー',true); ?></p>
-<p class="readMore"><a href="<?php the_permalink(); ?>">Show Details</a></p>
+<?php the_content('',false,''); ?>
+<p class="readMore"><a href="<?php the_permalink(); ?>">Read More</a></p>
 </div>
 </section>
 </article>
 <?php endwhile;endif; ?>
 
+<?php if(!have_posts()): ?>
+<article class="errorList">
+<header>
+<h3>このキーワードに一致する検索結果はありませんでした</h3>
+</header>
+<section>
+<div class="errors">
+<p>お手数ですが、再度キーワードを指定して検索して下さい。</p>
+</div>
+</section>
+</article>
+<?php endif; ?>
+    
 <aside class="pager">
 <div class="pagerBlock">
 <?php 

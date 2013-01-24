@@ -10,6 +10,8 @@
 	02: list
 	03: detail
         04: services
+        05: search
+        06: contact
 
 */
 
@@ -1028,3 +1030,60 @@ height:19px;
 padding-top: 15px;
 font-size:93%;
 }
+
+/* ============================================================
+05: search
+============================================================ */
+.countSearch{
+background:#f7f7f7;
+border:dotted 1px #d1d1d1;
+margin-top:1.5em;
+margin-bottom:1.5em;
+}
+
+.countSearch p{
+padding:4px 8px;
+font-size:100%;
+color: #333333;
+margin-bottom:0em;
+}
+
+.countSearch p strong{
+color: #00486a;
+font-weight: bold;
+}
+
+.errorList{
+width: 740px;
+height: auto;
+padding: 20px 0;
+margin-bottom: 20px;
+}
+
+.errorList header{
+margin: 0 20px;
+width: 700px;
+}
+
+.errorList header h3{
+color: #00486a;
+font-size: 114%;
+text-align: center;
+}
+
+.errors{
+margin: 0 20px;
+width: 700px;
+height:auto;
+overflow:hidden;
+}
+
+.errors p{
+padding-top: 30px;
+text-align: center;
+line-height:1.7;
+}
+
+/* ============================================================
+06: contact
+============================================================ */

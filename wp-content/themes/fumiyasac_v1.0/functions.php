@@ -167,4 +167,14 @@ add_filter('post_type_link', 'myposttype_permalink', 1, 3);
 add_filter( 'pre_site_transient_update_core', '__return_zero' );
 remove_action( 'wp_version_check', 'wp_version_check' );
 remove_action( 'admin_init', '_maybe_update_core' );
+
+
+//検索結果は投稿記事のみとする
+function SearchFilter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
 ?>
