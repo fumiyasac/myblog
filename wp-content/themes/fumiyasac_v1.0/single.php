@@ -122,13 +122,14 @@ get_header();
 <h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_related_entries.gif" height="19" width="700" alt=""></h3>
 </header>
 <div class="relatedContent">
-<ul>
+<?php similar_posts(); ?>
+<!--<ul>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
 <li><a href="#">この記事と関連するエントリーが入ります</a></li>
-</ul>
+</ul>-->
 </div>
 </aside>
 
