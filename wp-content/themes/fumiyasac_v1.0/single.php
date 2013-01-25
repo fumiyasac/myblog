@@ -123,13 +123,6 @@ get_header();
 </header>
 <div class="relatedContent">
 <?php similar_posts(); ?>
-<!--<ul>
-<li><a href="#">この記事と関連するエントリーが入ります</a></li>
-<li><a href="#">この記事と関連するエントリーが入ります</a></li>
-<li><a href="#">この記事と関連するエントリーが入ります</a></li>
-<li><a href="#">この記事と関連するエントリーが入ります</a></li>
-<li><a href="#">この記事と関連するエントリーが入ります</a></li>
-</ul>-->
 </div>
 </aside>
 
