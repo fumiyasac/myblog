@@ -54,8 +54,20 @@ get_header();
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
 <article class="articleList">
 <header>
-<h3><?php the_title(); ?></h3>
-<p class="date"><time><?php the_date(); ?></time>&nbsp;Author：<?php the_author(); ?></p>
+<h3>
+<?php if(is_page('about')): ?>
+TO CREATE A STIRについて
+<?php elseif(is_page('contact')): ?>
+当ブログに関するお問い合わせはこちら
+<?php endif; ?>
+</h3>
+<p class="date">
+<?php if(is_page('about')): ?>
+The meaning of "TO CREATE A STIR" .
+<?php elseif(is_page('contact')): ?>
+Question or suggestion about blog and services to me.
+<?php endif; ?>
+</p>
 </header>
 
 <aside class="socialButton">

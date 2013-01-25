@@ -1087,3 +1087,69 @@ line-height:1.7;
 /* ============================================================
 06: contact
 ============================================================ */
+/* CSS Delete */
+span.wpcf7-not-valid-tip-no-ajax{
+display: none;
+}
+
+img.ajax-loader{
+display: none;
+}
+
+/* Error Result */
+.wpcf7-mail-sent-ok{
+font-size: 93%;
+padding-bottom: 1.5em;
+}
+
+/* Error Result */
+.wpcf7-validation-errors{
+color: #ff0000;
+font-size: 93%;
+padding-bottom: 1.5em;
+}
+
+/* Form Modules */
+.contactRemarkText{
+font-size:93%;
+}
+
+.contactFormArea p label{
+font-size:93%;
+padding-left:6px;
+padding-top:2px;
+}
+
+.contactFormArea input#your-name,
+.contactFormArea input#your-email,
+.contactFormArea input#your-subject{
+width:350px;
+border:solid 1px #f1f1f1;
+height:18px;
+padding-top:2px;
+padding-bottom:2px;
+}
+
+.contactFormArea textarea#your-message{
+width:698px;
+border:solid 1px #f1f1f1;
+height:70px;
+padding-top:2px;
+padding-bottom:2px;
+}
+
+.contactFormArea input#your-name:hover,
+.contactFormArea input#your-email:hover,
+.contactFormArea input#your-subject:hover{
+border: solid 1px #d1d1d1!important;
+height:18px;
+padding-top:2px;
+padding-bottom:2px;
+}
+
+.contactFormArea textarea#your-message:hover{
+border: solid 1px #d1d1d1!important;
+height:70px;
+padding-top:2px;
+padding-bottom:2px;
+}
