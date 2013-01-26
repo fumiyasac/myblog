@@ -181,7 +181,6 @@ add_filter('pre_get_posts','SearchFilter');
 //contact form 7のCSSを削除
 add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 function my_deregister_styles() {
-        wp_deregister_style( 'wp-pagenavi' );
         wp_deregister_style( 'contact-form-7' );
 }
 
