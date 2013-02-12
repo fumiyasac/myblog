@@ -394,6 +394,8 @@ height: 160px;
 #subContainer #subContent .partnerSub .partnerContent ul li a{
 text-decoration:none;
 color:#333333;
+width: 290px;
+display: block;
 }
 
 #subContainer #subContent .partnerSub .partnerContent ul li a:hover{

@@ -22,25 +22,20 @@ get_header();
 
 <div id="slider">
 <!--slider picture here.-->
+<?php
+$sliderList = json_decode(file_get_contents(home_url('/')."/json/sliders/slide.json"),true);
+foreach ($sliderList as $slider):
+?>
 <div class="sliderContents">
-<a href="#">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/image_sample_top1.jpg" width="980" height="380" alt="" title="#caption1">
+<a href="<?php echo $slider['link']; ?>">
+<img src="<?php echo home_url('/'); ?><?php echo $slider['path']; ?>" width="980" height="380" alt="" title="#caption1">
 </a>
 <div class="caption">
-<h3>picture of caption1 here.</h3>
-<p>picture of text here.</p>
+<h3><?php echo $slider['date']; ?>　<?php echo $slider['title']; ?></h3>
+<p><?php echo $slider['description']; ?></p>
 </div>
 </div>
-
-<div class="sliderContents">
-<a href="#">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/image_sample_top2.jpg" width="980" height="380" alt="" title="#caption2">
-</a>
-<div class="caption">
-<h3>ああああああああああ</h3>
-<p>picture of text here.</p>
-</div>
-</div>
+<?php endforeach; ?>
 <!--slider picture here.-->
 </div>
 
@@ -97,22 +92,6 @@ get_header();
 </div>
 </section>
 </article>
-<!--
-<article class="articleList">
-<header>
-<h3>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-<p class="date"><time>2011.11.07</time>&nbsp;Author：Fumiya Sakai</p>
-</header>
-<section>
-<div class="entries">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample2.jpg" height="200" width="300" alt="" class="image padr20">
-<p class="category"><img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_programming.gif" height="15" width="70" alt=""></p>
-<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります...</p>
-<p class="readMore"><a href="#">Read More</a></p>
-</div>
-</section>
-</article>
--->
 <?php endwhile; endif; ?>
 <?php wp_reset_query(); ?>
 
@@ -123,10 +102,25 @@ get_header();
 <h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_myservices.gif" height="24" width="740" alt=""></h2>
 </header>
 <div class="aboutGallery" id="aboutGallery">
+<?php
+$args_service_img = array(
+    'post_type' => 'services'
+);
+query_posts($args_service_img);
+?>
+<?php if(have_posts()): ?>
+<?php while (have_posts()): the_post(); ?>
+<?php if(has_post_thumbnail($post->ID)): ?>
+<?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?>
+<?php else: ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" class="image" alt="">
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about2.jpg" height="350" width="700" class="image" alt="">
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about3.jpg" height="350" width="700" class="image" alt="">
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about4.jpg" height="350" width="700" class="image" alt="">
+<?php endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>
+<?php wp_reset_query(); ?>
 </div>
 <section>
 <header>

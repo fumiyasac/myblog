@@ -91,7 +91,8 @@ add_filter("mce_buttons", "ilc_mce_buttons");
 
 //カスタム投稿タイプを作成（services）
 //開発サービス投稿タイプ
-function services_custom_post_type(){    $labels = array(
+function services_custom_post_type(){
+    $labels = array(
         'name' => _x('開発サービス事例', 'post type general name'),
         'singular_name' => _x('開発サービス事例', 'post type singular name'),
         'add_new' => _x('開発サービス事例を追加', 'jobinfo'),

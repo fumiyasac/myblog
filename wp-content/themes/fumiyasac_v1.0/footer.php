@@ -30,7 +30,7 @@ Version: 1.0
 <ul class="navBlock2">
 <li><a href="/activities">Activities</a></li>
 <li><a href="/services">My Services</a></li>
-<li><a href="/advertisement">Advertisement</a></li>
+<!--<li><a href="/advertisement">Advertisement</a></li>-->
 <li><a href="/contact">Contact</a></li>
 <li><a href="/feed">Feed</a></li>
 </ul>
@@ -42,24 +42,18 @@ Version: 1.0
 <h4><img src="<?php bloginfo('template_url'); ?>/common/images/common/midashi_footer_partners.gif" height="13" width="164" alt=""></h4>
 </header>
 <div class="partnerContent">
+<?php if($footerList = json_decode(file_get_contents(home_url('/')."/json/footerads/footer.json"),true)): ?>
 <ul>
-<li class="magr30">
-<img src="<?php bloginfo('template_url'); ?>/common/images/banner/banner_sample1.gif" width="290" height="100" alt="">
-<p><strong>サンプルサイト1</strong><br><a href="#">テキストがはいります。<br>テキストがはいります。</a></p>
+<?php foreach($footerList as $footer): ?>
+<li <?php if($footer['id'] % 2 != 0) echo 'class="magr30"'; ?>>
+<img src="<?php echo home_url('/'); ?><?php echo $footer['banner']; ?>" width="290" height="100" alt="">
+<p><strong><?php echo $footer['title']; ?></strong><br><a href="<?php echo $footer['url']; ?>"><?php echo $footer['description']; ?></a></p>
 </li>
-<li>
-<img src="<?php bloginfo('template_url'); ?>/common/images/banner/banner_sample1.gif" width="290" height="100" alt="">
-<p><strong>サンプルサイト2</strong><br><a href="#">テキストがはいります。<br>テキストがはいります。</a></p>
-</li>
-<li class="magr30">
-<img src="<?php bloginfo('template_url'); ?>/common/images/banner/banner_sample1.gif" width="290" height="100" alt="">
-<p><strong>サンプルサイト3</strong><br><a href="#">テキストがはいります。<br>テキストがはいります。</a></p>
-</li>
-<li>
-<img src="<?php bloginfo('template_url'); ?>/common/images/banner/banner_sample1.gif" width="290" height="100" alt="">
-<p><strong>サンプルサイト4</strong><br><a href="#">テキストがはいります。<br>テキストがはいります。</a></p>
-</li>
+<?php endforeach; ?>
 </ul>
+<?php else: ?>
+<p>まだこのページは更新されていません。</p>
+<?php endif; ?>
 </div>
 </section>
 
