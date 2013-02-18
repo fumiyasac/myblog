@@ -1,10 +1,11 @@
 <?php
 /*
-Theme Name: fumiyasac-v1.0
-Theme URI: http://blog.just1factory.com
+Template:
+Theme Name: fumiyasac_v1.0
+Theme URI: http://blog.just1factory.net
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
-Author URI: http://blog.just1factory.com
+Author URI: http://blog.just1factory.net
 Template: single-services.php
 Version: 1.0
 */
@@ -150,7 +151,7 @@ if($tagsList = get_the_terms($post->ID,'services_tag')){
 <div class="serviceContentList">
 <?php
 //@todo:サービスの更新情報（JSON形式）を読み込んでリスト表示をする
-$infoJson = file_get_contents(get_post_meta($post->ID,'更新情報JSONデータURL',true),true);
+$infoJson = @file_get_contents(get_post_meta($post->ID,'更新情報JSONデータURL',true),true);
 if($infoJson != false){
     $serviceNewInfoList = json_decode($infoJson, true);
     echo '<ul>';

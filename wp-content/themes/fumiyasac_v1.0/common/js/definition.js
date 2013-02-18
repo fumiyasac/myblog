@@ -47,7 +47,7 @@ $(document).ready(function(){
     $('.autoClear').autoclear();
         
     //get Twitter jsonp list
-    var TWITTER_ACCOUNT = 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=fumiyasac&count=1&callback=?';
+    var TWITTER_ACCOUNT = 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=fumisac&count=1&callback=?';
     var COUNT_NUM = 1;
     $.getJSON(TWITTER_ACCOUNT, function (json) {
         for(var i=0; i<COUNT_NUM; i++){

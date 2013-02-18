@@ -1,10 +1,11 @@
 <?php
 /*
-Theme Name: fumiyasac-v1.0
-Theme URI: http://blog.just1factory.com
+Template:
+Theme Name: fumiyasac_v1.0
+Theme URI: http://blog.just1factory.net
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
-Author URI: http://blog.just1factory.com
+Author URI: http://blog.just1factory.net
 Template: sidebar.php
 Version: 1.0
 */
@@ -14,7 +15,7 @@ Version: 1.0
 <h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_search.gif" height="20" width="204" alt=""></h3>
 </header>
 <div class="sideContent clearfix">
-<form id="searchForm" method="get" action="http://wordpress.dev:8888/">
+<form id="searchForm" method="get" action="<?php echo home_url('/'); ?>">
 <input id="searchText" title="Please input keyword here!" class="autoClear" type="text" name="s">
 <input id="searchSubmit" type="submit" value="">
 </form>

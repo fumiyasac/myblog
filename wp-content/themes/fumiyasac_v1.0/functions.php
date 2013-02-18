@@ -1,10 +1,11 @@
 <?php
 /*
-Theme Name: fumiyasac-v1.0
-Theme URI: http://blog.just1factory.com
+Template:
+Theme Name: fumiyasac_v1.0
+Theme URI: http://blog.just1factory.net
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
-Author URI: http://blog.just1factory.com
+Author URI: http://blog.just1factory.net
 Template: functions.php
 Version: 1.0
 */ 
@@ -48,9 +49,7 @@ function my_archives_link($output) {
     return $output;
 }
 add_filter('get_archives_link', 'my_archives_link');
-?>
 
-<?php
 /* コメントのHTMLをカスタマイズする(divの数が合っていないので空のdivを一つ加えてあげる) */
 function mytheme_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
@@ -61,7 +60,6 @@ function mytheme_comment($comment, $args, $depth) {
 <?php comment_text(); ?>
 </div>
 <?php } ?>
-
 <?php
 /* コメントの注釈部分を削除する */
 function my_special_comment_after($args){

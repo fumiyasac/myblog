@@ -1,10 +1,11 @@
 <?php
 /*
-Theme Name: fumiyasac-v1.0
-Theme URI: http://blog.just1factory.com
+Template:
+Theme Name: fumiyasac_v1.0
+Theme URI: http://blog.just1factory.net
 Description: fumiyasac create blog template
 Author: Fumiya Sakai (just1factory)
-Author URI: http://blog.just1factory.com
+Author URI: http://blog.just1factory.net
 Template: tag.php
 Version: 1.0
 */ 
