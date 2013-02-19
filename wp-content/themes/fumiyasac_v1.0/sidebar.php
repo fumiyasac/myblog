@@ -63,7 +63,7 @@ echo '</a></li>';
 </ul>
 <div class="sideNavContent">
 <ul>
-<li><a href="http://twitter.com/fumiyasac" target="_blank">Show whole timeline</a></li>
+<li><a href="http://twitter.com/fumisac" target="_blank">Show whole timeline</a></li>
 </ul>
 </div>
 </div>
