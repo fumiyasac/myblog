@@ -39,7 +39,7 @@ get_header();
 <article class="detailArticle">
 
 <header class="detailTitleArticle">
-<h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_404.gif" height="24" width="740" alt=""></h2>
+<h2 class="notfoundMidashi">Sorry, This page is not found.</h2>
 </header>
 
 <article class="articleList">
