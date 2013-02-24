@@ -12,7 +12,7 @@ Version: 1.0
 ?>
 <aside class="searchArea">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_search.gif" height="20" width="204" alt=""></h3>
+<h3>Search</h3>
 </header>
 <div class="sideContent clearfix">
 <form id="searchForm" method="get" action="<?php echo home_url('/'); ?>">
@@ -24,7 +24,7 @@ Version: 1.0
 
 <aside class="categoryArea">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_category.gif" height="20" width="204" alt=""></h3>
+<h3>Category</h3>
 </header>
 <div class="sideNavContent">
 <ul>
@@ -44,7 +44,7 @@ echo '</a></li>';
 
 <aside class="backnumberArea">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_backnumber.gif" height="20" width="204" alt=""></h3>
+<h3>Back Number</h3>
 </header>
 <div class="sideNavContent">
 <ul>
@@ -55,7 +55,7 @@ echo '</a></li>';
 
 <aside class="twitterArea">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_twitter.gif" height="20" width="204" alt=""></h3>
+<h3>Twitter</h3>
 </header>
 <div class="twitterTLContent">
 <ul id="twitList1" class="twitBody">

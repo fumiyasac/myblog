@@ -43,13 +43,11 @@ get_header();
 <article class="detailArticle">
 
 <header class="detailTitleArticle">
-<h2>
 <?php if(is_page('about')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_about.gif" height="24" width="740" alt="">
+<h2 class="aboutMidashi">About</h2>
 <?php elseif(is_page('contact')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_contact.gif" height="24" width="740" alt="">
+<h2 class="contactMidashi">Contact</h2>
 <?php endif; ?>
-</h2>
 </header>
 
 <?php if(have_posts()): while(have_posts()): the_post(); ?>

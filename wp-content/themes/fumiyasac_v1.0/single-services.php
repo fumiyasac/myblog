@@ -40,9 +40,7 @@ get_header();
 <article class="detailArticle">
     
 <header class="detailTitleArticle">
-<h2>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_myservices.gif" height="24" width="740" alt="">
-</h2>
+<h2 class="servicesMidashi">My Services</h2>
 </header>
 
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
@@ -137,7 +135,7 @@ if($tagsList = get_the_terms($post->ID,'services_tag')){
 
 <aside class="serviceMaintenance">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_maintenance_about_services.gif" height="19" width="700" alt=""></h3>
+<h3>Maintenance about Services</h3>
 </header>
 <div class="serviceMaintenanceInfo">
 <p><?php echo get_post_meta($post->ID,'メンテナンス情報',true); ?></p>
@@ -146,7 +144,7 @@ if($tagsList = get_the_terms($post->ID,'services_tag')){
     
 <aside class="serviceInfoList">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_newinfo_about_services.gif" height="19" width="700" alt=""></h3>
+<h3>New Information about Services</h3>
 </header>
 <div class="serviceContentList">
 <?php
@@ -170,7 +168,7 @@ if($infoJson != false){
 
 <aside class="recentEntry">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_recent_services.gif" height="19" width="700" alt=""></h3>
+<h3 class="serviceSmallMidashi">Recent Services</h3>
 </header>
 <div class="recentContent">
 <ul>

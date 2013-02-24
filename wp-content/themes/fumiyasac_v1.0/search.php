@@ -39,9 +39,7 @@ get_header();
 <article class="listArticle">
 
 <header class="listTitleArticle">
-<h2>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_search.gif" height="24" width="740" alt="">
-</h2>
+<h2 class="searchMidashi">Search Result</h2>
 </header>
 
 <aside class="countSearch">   

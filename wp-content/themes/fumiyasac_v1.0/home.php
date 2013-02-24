@@ -58,7 +58,7 @@ foreach ($sliderList as $slider):
 <article class="topArticle">
 
 <header class="topTitleArticle">
-<h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_latest.gif" height="24" width="740" alt=""></h2>
+<h2>Entries List</h2>
 </header>
 
 <?php query_posts('showposts=5'); ?>
@@ -100,7 +100,7 @@ foreach ($sliderList as $slider):
 
 <article class="topAbout">
 <header class="topTitleAbout">
-<h2><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_top_myservices.gif" height="24" width="740" alt=""></h2>
+<h2>My Services</h2>
 </header>
 <div class="aboutGallery" id="aboutGallery">
 <?php

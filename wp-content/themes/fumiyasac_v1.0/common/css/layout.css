@@ -209,10 +209,36 @@ height:auto;
 padding-top:4px;
 }
 
-.searchArea header h3,.categoryArea header h3,.backnumberArea header h3,.twitterArea header h3{
+.searchArea header h3{
 display: block;
 width: 204px;
 height: 20px;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_search.gif) left top no-repeat;
+}
+
+.categoryArea header h3{
+display: block;
+width: 204px;
+height: 20px;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_category.gif) left top no-repeat;
+}
+
+.backnumberArea header h3{
+display: block;
+width: 204px;
+height: 20px;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_backnumber.gif) left top no-repeat;
+}
+
+.twitterArea header h3{
+display: block;
+width: 204px;
+height: 20px;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_twitter.gif) left top no-repeat;
 }
 
 .searchArea .sideContent{
@@ -332,7 +358,11 @@ border-right:solid 1px #eeeeee;
 
 
 #subContainer #subContent .navSub header h4{
+width: 147px;
 height:13px;
+display: block;
+text-indent: -9999px;
+background:url(../images/common/midashi_footer_contents.gif) left top no-repeat;
 }
 
 #subContainer #subContent .navSub nav {
@@ -373,7 +403,11 @@ padding-left: 20px;
 }
 
 #subContainer #subContent .partnerSub header h4{
+width: 164px;
 height:13px;
+display: block;
+text-indent: -9999px;
+background:url(../images/common/midashi_footer_partners.gif) left top no-repeat;
 padding-bottom: 10px;
 }
 

@@ -1551,7 +1551,7 @@ function comment_form( $args = array(), $post_id = null ) {
 <?php do_action( 'comment_form_before' ); ?>
 <aside class="commentForm">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_comment_form.gif" height="19" width="700" alt=""></h3>
+<h3>Comment</h3>
 </header>
 <div class="commentFormArea">
 <?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>

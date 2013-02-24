@@ -39,9 +39,7 @@ get_header();
 <article class="listArticle">
 
 <header class="listTitleArticle">
-<h2>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_monthly.gif" height="24" width="740" alt="">
-</h2>
+<h2 class="monthlyMidashi">Monthly Archives</h2>
 </header>
 
 <?php if(have_posts()):while(have_posts()):the_post(); ?>

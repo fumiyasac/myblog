@@ -12,6 +12,8 @@
         04: services
         05: search
         06: contact
+        07: about
+        08: etc
 
 */
 
@@ -118,6 +120,11 @@ height: 24px;
 }
 
 .topArticle .topTitleArticle h2{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_top_latest.gif) left top no-repeat;
 }
 
 /* articleList */
@@ -199,6 +206,11 @@ height: 24px;
 }
 
 .topAbout .topTitleAbout h2{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_top_myservices.gif) left top no-repeat;
 }
 
 /* aboutGallery */
@@ -650,6 +662,9 @@ margin:0;
 .relatedEntry header h3{
 width:700px;
 height:19px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_related_entries.gif) left top no-repeat;
 }
 
 .relatedEntry .relatedContent{
@@ -692,6 +707,13 @@ margin:0;
 .recentEntry header h3{
 width:700px;
 height:19px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_recent_entries.gif) left top no-repeat;
+}
+
+.recentEntry header h3.serviceSmallMidashi{
+background:#ffffff url(../images/common/header_recent_services.gif) left top no-repeat;
 }
 
 .recentEntry .recentContent{
@@ -739,6 +761,9 @@ margin:0;
 .commentForm header h3{
 width:700px;
 height:19px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_comment_form.gif) left top no-repeat;
 }
 
 .commentForm .commentFormArea{
@@ -916,48 +941,6 @@ color: #333333;
 text-decoration: underline;
 }
 
-/* Blog Modules(7.Service Info) */
-.serviceInfoList{
-margin:0 20px;
-width:700px;
-height:auto;
-background:#ffffff;
-margin-bottom:50px;
-}
-
-.serviceInfoList header{
-margin:0;
-}
-
-.serviceInfoList header h3{
-width:700px;
-height:19px;
-}
-
-.serviceInfoList .serviceContentList{
-}
-
-.serviceInfoList .serviceContentList ul{
-}
-
-.serviceInfoList .serviceContentList ul li{
-list-style-type: none;
-color:#333333;
-border-bottom: 1px dotted #dddddd;
-background:#f7f7f7;
-width: 700px;
-}
-
-.serviceInfoList .serviceContentList ul li a{
-display: block;
-background:#ffffff url(../images/common/icon_bg_comment.gif) left center no-repeat;
-padding: 6px 0 6px 12px;
-text-decoration: none;
-color:#333333;
-font-size: 85%;
-zoom:1; /* IE6,7 */
-}
-
 /* Blog Modules(8.Maintenance Info) */
 .serviceInfoList{
 margin:0 20px;
@@ -974,6 +957,9 @@ margin:0;
 .serviceInfoList header h3{
 width:700px;
 height:19px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_newinfo_about_services.gif) left top no-repeat;
 }
 
 .serviceInfoList .serviceContentList{
@@ -1021,6 +1007,9 @@ margin:0;
 .serviceMaintenance header h3{
 width:700px;
 height:19px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_maintenance_about_services.gif) left top no-repeat;
 }
 
 .serviceMaintenance .serviceMaintenanceInfo{
@@ -1152,4 +1141,93 @@ border: solid 1px #d1d1d1!important;
 height:70px;
 padding-top:2px;
 padding-bottom:2px;
+}
+
+/* ============================================================
+07: about
+============================================================ */
+
+
+/* ============================================================
+08: etc
+============================================================ */
+/* 見出しのスタイルシート一覧 */
+h2.aboutMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_about.gif) left top no-repeat;
+}
+
+h2.contactMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_contact.gif) left top no-repeat;
+}
+
+h2.searchMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_search.gif) left top no-repeat;
+}
+
+h2.monthlyMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_monthly.gif) left top no-repeat;
+}
+
+h2.informationMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_information.gif) left top no-repeat;
+}
+
+h2.programmingMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_programming.gif) left top no-repeat;
+}
+
+h2.designMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_design.gif) left top no-repeat;
+}
+
+h2.reportsMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_reports.gif) left top no-repeat;
+}
+
+h2.activitiesMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_detail_activeties.gif) left top no-repeat;
+}
+
+h2.servicesMidashi{
+width: 740px;
+height: 24px;
+display: block;
+text-indent: -9999px;
+background:#ffffff url(../images/common/header_top_myservices.gif) left top no-repeat;
 }

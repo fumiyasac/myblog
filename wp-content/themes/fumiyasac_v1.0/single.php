@@ -50,19 +50,17 @@ get_header();
 <article class="detailArticle">
     
 <header class="detailTitleArticle">
-<h2>
 <?php if(in_category('information')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_information.gif" height="24" width="740" alt="">
+<h2 class="informationMidashi">Information</h2>
 <?php elseif(in_category('programming')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_programming.gif" height="24" width="740" alt="">
+<h2 class="programmingMidashi">Programming</h2>
 <?php elseif(in_category('design')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_design.gif" height="24" width="740" alt="">
+<h2 class="designMidashi">Design</h2>
 <?php elseif(in_category('reports')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_reports.gif" height="24" width="740" alt="">
+<h2 class="designMidashi">Reports</h2>
 <?php elseif(in_category('activeties')): ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/common/header_detail_activeties.gif" height="24" width="740" alt="">    
+<h2 class="activitiesMidashi">Activities</h2>
 <?php endif; ?>
-</h2>
 </header>
 
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
@@ -120,7 +118,7 @@ get_header();
 
 <aside class="relatedEntry">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_related_entries.gif" height="19" width="700" alt=""></h3>
+<h3>Related Entries</h3>
 </header>
 <div class="relatedContent">
 <?php similar_posts(); ?>
@@ -129,7 +127,7 @@ get_header();
 
 <aside class="recentEntry">
 <header>
-<h3><img src="<?php bloginfo('template_url'); ?>/common/images/common/header_recent_entries.gif" height="19" width="700" alt=""></h3>
+<h3>Recent Entries</h3>
 </header>
 <div class="recentContent">
 <ul>

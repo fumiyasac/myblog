@@ -17,7 +17,7 @@ Version: 1.0
 
 <section class="navSub">
 <header>
-<h4><img src="<?php bloginfo('template_url'); ?>/common/images/common/midashi_footer_contents.gif" height="13" width="147" alt=""></h4>
+<h4>Contents List</h4>
 </header>
 <nav class="clearfix">
 <ul class="navBlock1">
@@ -40,7 +40,7 @@ Version: 1.0
 
 <section class="partnerSub">
 <header>
-<h4><img src="<?php bloginfo('template_url'); ?>/common/images/common/midashi_footer_partners.gif" height="13" width="164" alt=""></h4>
+<h4>Partners and Friends</h4>
 </header>
 <div class="partnerContent">
 <?php if($footerList = json_decode(file_get_contents(home_url('/')."/json/footerads/footer.json"),true)): ?>
