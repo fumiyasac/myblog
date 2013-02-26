@@ -548,6 +548,7 @@ padding: 4px 30px;
 .entry .codeArea ol.codeView li{
 line-height: 1.7;
 color: #00486a;
+margin-left: 8px;
 }
 
 .entry .codeArea ol.codeView li code{
