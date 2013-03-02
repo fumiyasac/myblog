@@ -9,8 +9,7 @@ Author URI: http://blog.just1factory.net
 Template: archive.php
 Version: 1.0
 */ 
-?>
-<?php
+
 /* いらないCSSを削除 */
 if(has_action('wp_head','_admin_bar_bump_cb')){
 remove_action('wp_head','_admin_bar_bump_cb');

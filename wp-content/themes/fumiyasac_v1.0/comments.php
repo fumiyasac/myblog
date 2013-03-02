@@ -14,9 +14,7 @@ Version: 1.0
 if(post_password_required()){
     return;
 }
-?>
 
-<?php 
 //コメントフォーム
 comment_form();
 ?>
