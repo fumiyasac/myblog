@@ -70,7 +70,10 @@ foreach ($sliderList as $slider):
 <section>
 <div class="entries">
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID); ?>
+<?php
+$attr = array('class' => 'image padr20');
+echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr); 
+?>
 <?php else: ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/post_no_thumbnail.jpg" height="200" width="300" alt="" class="image padr20">
 <?php endif; ?>

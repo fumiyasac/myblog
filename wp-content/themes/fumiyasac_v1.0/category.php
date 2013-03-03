@@ -56,7 +56,7 @@ get_header();
 <?php elseif(in_category('design')): ?>
 <h2 class="designMidashi">Design</h2>
 <?php elseif(in_category('reports')): ?>
-<h2 class="designMidashi">Reports</h2>
+<h2 class="reportsMidashi">Reports</h2>
 <?php elseif(in_category('activeties')): ?>
 <h2 class="activitiesMidashi">Activities</h2>
 <?php endif; ?>
@@ -71,7 +71,10 @@ get_header();
 <section>
 <div class="entries">
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID); ?>
+<?php
+$attr = array('class' => 'image padr20');
+echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr); 
+?>
 <?php else: ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/sample/post_no_thumbnail.jpg" height="200" width="300" alt="" class="image padr20">
 <?php endif; ?>

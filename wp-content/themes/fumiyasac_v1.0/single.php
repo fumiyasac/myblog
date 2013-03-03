@@ -56,7 +56,7 @@ get_header();
 <?php elseif(in_category('design')): ?>
 <h2 class="designMidashi">Design</h2>
 <?php elseif(in_category('reports')): ?>
-<h2 class="designMidashi">Reports</h2>
+<h2 class="reportsMidashi">Reports</h2>
 <?php elseif(in_category('activeties')): ?>
 <h2 class="activitiesMidashi">Activities</h2>
 <?php endif; ?>
@@ -84,6 +84,12 @@ get_header();
 <div class="entry">
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 <?php /* which is better? exec get_the_post_thumbnail() or edit form blog ? */ ?>
+<p>
+<?php
+$attr = array('class' => 'blog_single_midashi');
+echo get_the_post_thumbnail($post->ID, "blog_article", $attr);
+?>
+</p>
 <?php the_content(); ?>    
 <?php endwhile;endif; ?>
 </div>
