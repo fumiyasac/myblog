@@ -28,7 +28,7 @@ foreach ($sliderList as $slider):
 ?>
 <div class="sliderContents">
 <a href="<?php echo $slider['link']; ?>">
-<img src="<?php echo home_url('/'); ?><?php echo $slider['path']; ?>" width="980" height="380" alt="" title="#caption1">
+<img src="<?php echo home_url('/'); ?><?php echo $slider['path']; ?>" width="<?php echo getArrayConfig('sliderTopImgSizeWidth'); ?>" height="<?php echo getArrayConfig('sliderTopImgSizeHeight'); ?>" alt="" title="#caption1">
 </a>
 <div class="caption">
 <h3><?php echo $slider['date']; ?>　<?php echo $slider['title']; ?></h3>

@@ -188,4 +188,42 @@ add_action( 'wp_print_scripts', 'my_deregister_script', 100 );
 function my_deregister_script() {
 	wp_deregister_script( 'contact-form-7' );
 }
+
+//スマートフォンの条件分岐
+function isSmartPhone(){
+    $ua = $_SERVER['HTTP_USER_AGENT'];
+    if( (strpos($ua,'iPhone') !== false) || (strpos($ua,'iPod') !== false) || (strpos($ua,'Android') !== false) ){
+      $uaVal = "sp";  
+    }else{
+      /*$uaVal = "web";*/ $uaVal = "sp";  
+    }
+    return $uaVal;
+}
+
+//定数値の条件分岐（指定したキーに該当する値を取得）
+function getArrayConfig($key){
+    $ua = $_SERVER['HTTP_USER_AGENT'];
+    if( isSmartPhone() === "sp" ){
+        
+        //配列定数値の設定（スマートフォン）
+        $templateConfig = array(
+            'sliderTopImgSizeWidth' => '320',
+            'sliderTopImgSizeHeight' => '120',
+        );
+        
+    }else{
+        
+        //配列定数値の設定（Web画面）
+        $templateConfig = array(
+            'sliderTopImgSizeWidth' => '980',
+            'sliderTopImgSizeHeight' => '380',
+        );
+        
+    }
+    
+    //該当キーの値を取得
+    $value = $templateConfig[$key];
+    return $value;
+}
+
 ?>

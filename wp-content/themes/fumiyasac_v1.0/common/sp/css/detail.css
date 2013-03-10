@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+    detail.css
+	
+	Fumiya Sakai(Just One Factory).  
+
+	01: home
+	02: 
+	03: 
+
+*/
+
+/* ============================================================
+01: home
+============================================================ */
+/* slider */
+#slider{
+margin-left: auto;
+margin-right: auto;
+width:320px;
+height:120px;
+}
+
+#slider .sliderContents{
+width:320px;
+height:120px;
+position:relative;
+}
+
+#slider .sliderContents a{
+width:320px;
+height:120px;
+position:absolute;
+left:0;
+top:0;
+display:block;
+}
+
+#slider .sliderContents .caption{
+position:absolute;
+bottom:0;
+width:320px;
+background-image:url(../../images/common/bg_png.png);
+background-repeat:repeat;
+/* opacity settings */
+/*
+background:#333333;
+filter:alpha(opacity=50);
+-moz-opacity:0.5;
+opacity:0.5;
+*/
+}
+
+#slider .sliderContents .caption h3{
+margin-top:5px;
+margin-left:8px;
+margin-right:8px;
+color:#FFFFFF;
+font-size:11px;
+}
+
+#slider .sliderContents .caption p{
+display: none;
+}
+
+/* navPicsBase */
+#navPicsBase{
+margin-left: auto;
+margin-right: auto;
+width:320px;
+height:40px;
+position:relative;
+}
+
+#navPicsBase #navPics{
+position:absolute;
+text-align:center;
+height:8px;
+padding-top:15px;
+padding-bottom:15px;
+}
+
+#navPicsBase #navPics a{
+text-align:center;
+display:block;
+background:url(../../images/common/icon_circle.gif) left top no-repeat;
+width:8px;
+height:8px;
+padding-left:8px;
+padding-right:8px;
+text-indent:-9999px;
+text-align:center;
+float:left;
+}
+
+#navPicsBase #navPics a.activeSlide{
+background:url(../../images/common/icon_circle_hover.gif) left top no-repeat;
+}
+
+
+/* ============================================================
+02: 
+============================================================ */
+
+
+/* ============================================================
+03: 
+============================================================ */
+
