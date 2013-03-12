@@ -278,13 +278,13 @@ ul.twitBody li.twitEntry a{
 05: footer
 ============================================================ */
 #globalFooter{
-    height:40px;
+    height:60px;
     background-color:#333333;
 }
 
 #globalFooter div.footerContent{
     position: relative;
-    height: 40px;
+    height: 60px;
 }
 
 #globalFooter div.footerContent p.copyright{
@@ -295,7 +295,7 @@ ul.twitBody li.twitEntry a{
 
 #globalFooter div.footerContent p.topAnchor{
     position: absolute;
-    top:12px;
+    top:33px;
     right:10px;
 }
 

@@ -72,10 +72,13 @@ get_header();
 
 <aside class="socialButton">
 <ul>
-<li class="padr10"><a href="http://mixi.jp/share.pl" class="mixi-check-button"　data-key="mixi チェックキー">Check</a>
+<li class="padr10"><a href="http://mixi.jp/share.pl" class="mixi-check-button"　data-key="715b696096a8f1a9b37411885a31fb9e1be3820b">Check</a>
 <script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script></li>
 <li><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="ja">ツイート</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
-<li><iframe src="http://www.facebook.com/plugins/like.php?locale=ja_JP&amp;href=http%3A%2F%2Fcreo153%2Ecom%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:103px;height:21px;" allowtransparency="true"></iframe></li>
+<li>
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblog.just1factory.net%2F&amp;send=false&amp;layout=standard&amp;width=78&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=23&amp;appId=391485624283987" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:78px; height:24px;" allowTransparency="true"></iframe>
+<!--iframe src="http://www.facebook.com/plugins/like.php?locale=ja_JP&amp;href=http%3A%2F%2Fblog%2Ejust1factory%2Enet%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:103px;height:21px;" allowtransparency="true"></iframe-->
+</li>
 <li><g:plusone size="medium"></g:plusone></li>
 </ul>
 </aside>
@@ -87,7 +90,11 @@ get_header();
 <p>
 <?php
 $attr = array('class' => 'blog_single_midashi');
+if( isSmartPhone() === "sp" ){
+echo get_the_post_thumbnail($post->ID, 'post-thumbnail'); 
+}else{
 echo get_the_post_thumbnail($post->ID, "blog_article", $attr);
+}
 ?>
 </p>
 <?php the_content(); ?>    

@@ -77,8 +77,14 @@ add_filter("comment_form_defaults","my_special_comment_after");
  * add_image_size( 'mini', 45, 45, true );
  * 
  */
+
+/* Web用 */
 add_image_size('blog_article', 700, 464, true);
 add_image_size('service_article', 700, 350, true);
+
+/* Smartphone用 */
+add_image_size('blog_article_sp', 300, 200, true);
+add_image_size('service_article_sp', 300, 150, true);
 
 //ビジュアルリッチエディターにボタンを追加
 function ilc_mce_buttons($buttons){
@@ -195,7 +201,7 @@ function isSmartPhone(){
     if( (strpos($ua,'iPhone') !== false) || (strpos($ua,'iPod') !== false) || (strpos($ua,'Android') !== false) ){
       $uaVal = "sp";  
     }else{
-      /*$uaVal = "web";*/ $uaVal = "sp";  
+      $uaVal = "web";  
     }
     return $uaVal;
 }
@@ -209,6 +215,8 @@ function getArrayConfig($key){
         $templateConfig = array(
             'sliderTopImgSizeWidth' => '320',
             'sliderTopImgSizeHeight' => '120',
+            'sliderServiceImgSizeWidth' => '300',
+            'sliderServiceImgSizeHeight' => '150',
         );
         
     }else{
@@ -217,6 +225,8 @@ function getArrayConfig($key){
         $templateConfig = array(
             'sliderTopImgSizeWidth' => '980',
             'sliderTopImgSizeHeight' => '380',
+            'sliderServiceTopSizeWidth' => '700',
+            'sliderServiceTopSizeHeight' => '350',
         );
         
     }

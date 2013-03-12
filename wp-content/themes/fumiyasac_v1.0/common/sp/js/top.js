@@ -23,4 +23,12 @@ $(document).ready(function(){
     var positionPicsNav = 160 - navPicsWidth / 2;
     $('#navPics').css("left",positionPicsNav);
     
+    //aboutSlider
+    $('#aboutGallery').cycle({
+        fx:      'scrollLeft',
+        next:   '#aboutGallery',
+        timeout:  6000,
+        easing:  'easeInOutBack'
+    });
+    
 });

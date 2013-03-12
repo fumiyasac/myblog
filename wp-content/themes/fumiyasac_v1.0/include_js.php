@@ -18,6 +18,10 @@ Version: 1.0
 <?php if(is_home()): ?>
 <script src="<?php bloginfo('template_url'); ?>/common/sp/js/top.js"></script>
 <?php endif; ?>
+<?php if(is_single()): ?>
+<script src="<?php bloginfo('template_url'); ?>/common/sp/js/detail.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/common/js/validator.js"></script>
+<?php endif ?>
 <?php /* Webのとき */ else: ?>
 <script src="<?php bloginfo('template_url'); ?>/common/js/html5media.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/common/js/jquery.easing.1.3.js"></script>

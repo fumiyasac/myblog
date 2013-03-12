@@ -91,11 +91,11 @@ echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr);
 <?php if(!have_posts()): ?>
 <article class="errorList">
 <header>
-<h3>このキーワードに一致する検索結果はありませんでした</h3>
+<h3>キーワードに一致する検索結果はありません</h3>
 </header>
 <section>
 <div class="errors">
-<p>お手数ですが、再度キーワードを指定して検索して下さい。</p>
+<p>お手数ですが、再度キーワードを指定して下さい。</p>
 </div>
 </section>
 </article>

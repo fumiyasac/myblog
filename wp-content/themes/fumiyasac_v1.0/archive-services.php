@@ -50,9 +50,15 @@ get_header();
 <section>
 <div class="services">
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?>
+<?php
+if( isSmartPhone() === "sp" ){
+echo get_the_post_thumbnail($post->ID, 'service_article_sp');
+}else{
+echo get_the_post_thumbnail($post->ID, 'service_article');
+}
+?>
 <?php else: ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" alt="">
+<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="<?php echo getArrayConfig('sliderServiceImgSizeHeight'); ?>" width="<?php echo getArrayConfig('sliderServiceImgSizeWidth'); ?>" alt="">
 <?php endif; ?>
 <p class="category">
 <?php if(in_category('information')): ?>

@@ -114,12 +114,15 @@ query_posts($args_service_img);
 <?php if(have_posts()): ?>
 <?php while (have_posts()): the_post(); ?>
 <?php if(has_post_thumbnail($post->ID)): ?>
-<?php echo get_the_post_thumbnail($post->ID, 'service_article'); ?>
+<?php
+if( isSmartPhone() === "sp" ){
+echo get_the_post_thumbnail($post->ID, 'service_article_sp');
+}else{
+echo get_the_post_thumbnail($post->ID, 'service_article');  
+}
+?>
 <?php else: ?>
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="350" width="700" class="image" alt="">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about2.jpg" height="350" width="700" class="image" alt="">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about3.jpg" height="350" width="700" class="image" alt="">
-<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about4.jpg" height="350" width="700" class="image" alt="">
+<img src="<?php bloginfo('template_url'); ?>/common/images/sample/thumb_top_sample_about1.jpg" height="<?php echo getArrayConfig('sliderServiceImgSizeHeight'); ?>" width="<?php echo getArrayConfig('sliderServiceImgSizeWidth'); ?>" class="image" alt="">
 <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>
