@@ -63,7 +63,7 @@ get_header();
 </ul>
 </aside>
 
-<section>
+<section id="serviceArticleSinglePage">
 <div class="entry">
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 <?php if(has_post_thumbnail($post->ID)): ?>

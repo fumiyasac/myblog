@@ -351,11 +351,23 @@ aside.pager .pagerBlock a{
     line-height:1.7;
 }
 
+#blogArticleSinglePage .entry p img,
+#blogArticleSinglePage .entry section p img,
+#blogArticleSinglePage .entry section div p img{
+    width: 300px;
+    height: 200px;
+}
+
+#serviceArticleSinglePage .entry p img,
+#serviceArticleSinglePage .entry section p img,
+#serviceArticleSinglePage .entry section div p img{
+    width: 300px;
+    height: 150px;
+}
+
 .entry p img,
 .entry section p img,
 .entry section div p img{
-    width: 300px;
-    height: 200px;
 }
 
 .entry p img a,

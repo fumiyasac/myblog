@@ -83,7 +83,7 @@ get_header();
 </ul>
 </aside>
 
-<section>
+<section id="blogArticleSinglePage">
 <div class="entry">
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
 <?php /* which is better? exec get_the_post_thumbnail() or edit form blog ? */ ?>
