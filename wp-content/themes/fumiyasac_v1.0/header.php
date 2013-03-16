@@ -19,7 +19,7 @@ Version: 1.0
 </title>
 <!-- meta and other definition -->
 <meta name="description" content="<?php bloginfo('description'); ?>">
-<meta name="keywords" content="">
+<meta name="keywords" content="Webサービス制作,スマートフォンアプリ,PHP,Ruby on Rails,Android,プログラミング,デザイン">
 <link rel="start" href="/">
 <link rel="index" href="/index.php" title="<?php bloginfo('name'); ?>">
 <meta http-equiv="imagetoolbar" content="no">
