@@ -7,19 +7,14 @@
 
 $(document).ready(function(){
     
-    //strip & replace character
-    var TARGET_LIST = ".breadcramb li.last";
+    //strip & replace character at breadcramb
+    var targetBreadcramb = ['.breadcramb li.last'];
     var STRING_LIMIT = 10;
-    var string = $(TARGET_LIST).html();
-    if(string.length > STRING_LIMIT){
-        newString = string.substr(0, STRING_LIMIT);
-        $(TARGET_LIST).html(newString + "...");
-    }
+    initTargetListTags(targetBreadcramb, STRING_LIMIT);
 
     //strip & replace character at list links.
     var targetEntries =['.recentContent ul li a','.relatedContent ul li a']; 
     var STRING_LIMIT_ENTRIES = 20;
-    
     initTargetListTags(targetEntries, STRING_LIMIT_ENTRIES);
     
     function initTargetListTags(array, val){
