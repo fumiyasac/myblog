@@ -15,6 +15,30 @@ $(document).ready(function(){
         newString = string.substr(0, STRING_LIMIT);
         $(TARGET_LIST).html(newString + "...");
     }
+
+    //strip & replace character at list links.
+    var targetEntries =['.recentContent ul li a','.relatedContent ul li a']; 
+    var STRING_LIMIT_ENTRIES = 20;
+    
+    initTargetListTags(targetEntries, STRING_LIMIT_ENTRIES);
+    
+    function initTargetListTags(array, val){
+        for(i=0; i<array.length; i++){
+            srtipListTag(array[i],val);
+        }
+    }
+    
+    function srtipListTag(target, val){
+        count = $(target).length;
+        for(var i=0; i<count; i++){
+            stringLink = $(target).eq(i).html();
+            //alert(stringLink);
+            if(stringLink.length > val){
+                newStringLink = stringLink.substr(0, val);
+                $(target).eq(i).html(newStringLink + "...");
+            }
+        }   
+    }
     
     //Panel action /* !if find bug IE, detele it. */
     var PANELS_BUTTON = ".commentToggle span";
@@ -29,4 +53,5 @@ $(document).ready(function(){
             $(AREA).slideToggle("fast");
         });
     }
+    
 });
