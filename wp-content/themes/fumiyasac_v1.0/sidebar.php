@@ -68,3 +68,19 @@ echo '</a></li>';
 </div>
 </div>
 </aside>
+
+<aside class="adsenseArea">
+<div class="sideNavContent">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7366377584181237";
+/* adsense */
+google_ad_slot = "6284011102";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</aside>
