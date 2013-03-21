@@ -327,7 +327,13 @@ text-decoration:none;
 ul.twitBody li.twitEntry a:hover{
 text-decoration:underline;
 }
-    
+
+.adsenseArea .sideNavContent{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* contents(rightColmn) */
 #rightColumn{
 float:right;
