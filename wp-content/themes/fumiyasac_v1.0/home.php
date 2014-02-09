@@ -86,7 +86,7 @@ echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr);
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_design.gif" height="15" width="40" alt="">
 <?php elseif(in_category('reports')): ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_reports.gif" height="15" width="41" alt="">
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt="">
 <?php endif; ?>    
 </p>

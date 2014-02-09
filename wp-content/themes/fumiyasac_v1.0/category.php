@@ -30,7 +30,7 @@ get_header();
 <li class="last"><?php echo get_catname('6'); ?></li>
 <?php elseif(in_category('reports')): ?>
 <li class="last"><?php echo get_catname('4'); ?></li>
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <li class="last"><?php echo get_catname('7'); ?></li>
 <?php endif; ?>
 </ul>
@@ -57,7 +57,7 @@ get_header();
 <h2 class="designMidashi">Design</h2>
 <?php elseif(in_category('reports')): ?>
 <h2 class="reportsMidashi">Reports</h2>
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <h2 class="activitiesMidashi">Activities</h2>
 <?php endif; ?>
 </header>
@@ -87,7 +87,7 @@ echo get_the_post_thumbnail($post->ID, 'post-thumbnail', $attr);
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_design.gif" height="15" width="40" alt="">
 <?php elseif(in_category('reports')): ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_reports.gif" height="15" width="41" alt="">
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <img src="<?php bloginfo('template_url'); ?>/common/images/common/icon_activities.gif" height="15" width="62" alt="">
 <?php endif; ?>
 </p>

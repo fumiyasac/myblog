@@ -29,7 +29,7 @@ get_header();
 <li><a href="<?php echo get_category_link('6'); ?>"><?php echo get_catname('6'); ?></a></li>
 <?php elseif(in_category('reports')): ?>
 <li><a href="<?php echo get_category_link('4'); ?>"><?php echo get_catname('4'); ?></a></li>
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <li><a href="<?php echo get_category_link('7'); ?>"><?php echo get_catname('7'); ?></a></li>
 <?php endif; ?>
 <li class="last"><?php the_title(); ?></li>
@@ -57,7 +57,7 @@ get_header();
 <h2 class="designMidashi">Design</h2>
 <?php elseif(in_category('reports')): ?>
 <h2 class="reportsMidashi">Reports</h2>
-<?php elseif(in_category('activeties')): ?>
+<?php elseif(in_category('activities')): ?>
 <h2 class="activitiesMidashi">Activities</h2>
 <?php endif; ?>
 </header>
